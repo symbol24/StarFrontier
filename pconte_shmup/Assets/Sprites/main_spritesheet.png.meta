@@ -1,0 +1,607 @@
+fileFormatVersion: 2
+guid: 8b34a3219d0c6c54faffe6aaff1cf812
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 50
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: EAI_pink_left
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 467
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_pink_center
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 467
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_pink_right
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 467
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_darkyellow_left
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 462
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_darkyellow_center
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 462
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_darkyellow_right
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 462
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_green_left
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 467
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_green_center
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 467
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_green_right
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 467
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_lightyellow_left
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 397
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_lightyellow_right
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 397
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_lightyellow_right
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 397
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_orange_left
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 397
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_orange_center
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 397
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_orange_right
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 397
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_purple_left
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 392
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_purple_center
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 392
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_purple_right
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 392
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_smallorange_left
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 335
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_smallorange_center
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 335
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_smallorange_right
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 335
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_smallgreen_orange
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 335
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_smallgreen_center
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 335
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: EAI_smallgreen_right
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 335
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: main_ship_left
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 178
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: main_ship_center
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 178
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: main_ship_right
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 178
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_pink_01
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 107
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_pink_02
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 102
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_pink_03
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 98
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_pink_04
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 98
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_pink_05
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 98
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_pink_06
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 99
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_pink_07
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 102
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_pink_08
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 105
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_pink_09
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 108
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_pink_10
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 111
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_blue_01
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 60
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_blue_02
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 55
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_blue_03
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 51
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_blue_04
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 51
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_blue_05
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 51
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_blue_06
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 52
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_blue_07
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 55
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_blue_08
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 58
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_blue_09
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 61
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_blue_10
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 64
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: box_green
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 18
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cross_green
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 18
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: box_blue
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: box_orange
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: box_light_red
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: box_corner_red
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ball_red
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 21
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: bullet_orange
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 18
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ext_right
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 17
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: bullet_red
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 18
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: ext_left
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 17
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: bullet_blue
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 19
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_blue_11
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 67
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: expl_pink_11
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 114
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: cannon
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 17
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
