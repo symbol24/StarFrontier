@@ -14,7 +14,7 @@ public class Starfield_Controller : MonoBehaviour {
 	public float maxY;
 	public float maxX;
 	public float[] maxSpawnRate;
-	public float[] nextFire;
+	public float[] nextSpawn;
 	private float previousX;
 	public float spaceX;
 	public Color[] starColors;
@@ -107,8 +107,8 @@ public class Starfield_Controller : MonoBehaviour {
 		if(Application.loadedLevelName == "MainGame"){
 			if(gameMgr != null && gameMgr.currentState == Game_Manager.gameState.playing){
 				Stack<Star_Controller> tempsStarStack;
-				for(int i = 0; i < nextFire.Length; i++){
-					if(Time.time > nextFire[i]){
+				for(int i = 0; i < nextSpawn.Length; i++){
+					if(Time.time > nextSpawn[i]){
 						if(i == 0){
 							tempsStarStack = starsTop;
 						}else if(i == 1){
@@ -123,8 +123,8 @@ public class Starfield_Controller : MonoBehaviour {
 		}else if(Application.loadedLevelName == "MainMenu"){
 			if(mainMenuMgr != null & mainMenuMgr.currentState == Main_Menu_Controller.gameState.playing){
 				Stack<Star_Controller> tempsStarStack;
-				for(int i = 0; i < nextFire.Length; i++){
-					if(Time.time > nextFire[i]){
+				for(int i = 0; i < nextSpawn.Length; i++){
+					if(Time.time > nextSpawn[i]){
 						if(i == 0){
 							tempsStarStack = starsTop;
 						}else if(i == 1){
@@ -164,7 +164,7 @@ public class Starfield_Controller : MonoBehaviour {
 	public void popStar(Stack<Star_Controller> starStack, int parrallaxID){
 		Star_Controller tempStar;
 		float tempX = Random.Range(-maxX, maxX);
-		nextFire[parrallaxID] = Time.time + maxSpawnRate[parrallaxID];
+		nextSpawn[parrallaxID] = Time.time + maxSpawnRate[parrallaxID];
 		tempStar = starStack.Pop();
 		tempStar.transform.position = new Vector2(tempX, maxY);
 		if(!inWarp && tempStar.isInWarp){
