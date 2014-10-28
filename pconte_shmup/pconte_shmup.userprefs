@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Starfield_Controller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\main_ship.cs">
     <Files>
-      <File FileName="Assets\Scripts\Starfield_Controller.cs" Line="195" Column="1" />
+      <File FileName="Assets\Scripts\main_ship.cs" Line="105" Column="136" />
+      <File FileName="Assets\Scripts\bullet_controller.cs" Line="35" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

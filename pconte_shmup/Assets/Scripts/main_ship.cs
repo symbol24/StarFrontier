@@ -9,7 +9,7 @@ public class main_ship : MonoBehaviour {
 	public int playerHP;
 	private int currentHP;
 	public int playerArmor;
-	public float speed = 10.0f;
+	public float speed;
 	public float horLimit;
 	public float vertLimit;
 	private Vector2 velocity = Vector2.zero;
@@ -45,46 +45,45 @@ public class main_ship : MonoBehaviour {
 		gameMgr = GameObject.Find ("GameManagerObj").GetComponent<Game_Manager> ();
 		//instantiating the first cannon
 		inUseCannon = Instantiate (cannons[cannonID], cannonPoint.transform.position, cannonPoint.transform.rotation) as GameObject;
+		inUseCannon.transform.parent = transform;
 		currentHP = playerHP;
 		//instantiate the shilds for HP
 		for (int i = 0; i < currentHP; i++) {
 			shields[i] = Instantiate(prefabShield, transform.position, transform.rotation) as GameObject;
 			float newScale = shieldScaler * i;
 			shields[i].transform.localScale += new Vector3(newScale, newScale, 0);
+			shields[i].transform.parent = transform;
 		}
 	}
 	
 	void Update () {
 		if(gameMgr.currentState == Game_Manager.gameState.playing && !isDead){
-			velocity = Vector2.zero; // MATHS!
-
+			velocity = Vector2.zero;
+			//get both controller and keyboard axis's
 			vertValue = Input.GetAxis("Vertical");
 			horValue = Input.GetAxis("Horizontal");
 
-			if (vertValue > deadSpot && rigidbody2D.transform.position.y < vertLimit) {
-				velocity.y = speed * vertValue;
-			} else if (vertValue < -deadSpot && rigidbody2D.transform.position.y > -vertLimit) {
-				velocity.y = speed * vertValue;
-			}
+			//moving to the limits
+			velocity.x = horValue * speed;
+			velocity.y = vertValue * speed;
 
-			if (horValue > deadSpot && rigidbody2D.transform.position.x < horLimit) {
-				velocity.x = speed * horValue;
+			//changing the ship from side to side and idle
+			if (horValue > 0.0f) {
 				anim.SetInteger("direction",1);
-			} else if (horValue < -deadSpot && rigidbody2D.transform.position.x > -horLimit) {
-				velocity.x = speed * horValue;
+			} else if (horValue < 0.0f) {
 				anim.SetInteger("direction", -1);
 			}else{
 				anim.SetInteger("direction", 0);
 			}
 
-			velocity = velocity * Time.deltaTime;
+			//move the ship, cannon and shields
+			velocity = Vector2.ClampMagnitude(velocity, speed * Time.deltaTime);
 			transform.Translate (velocity, Space.World);
-			inUseCannon.transform.Translate (velocity, Space.World);
-			for(int i = 0; i < shields.Length; i++){
-				if(shields[i] != null){
-					shields[i].transform.Translate (velocity, Space.World);
-				}
-			}
+
+			//clamping to screen size
+			float clampedLimitX = Mathf.Clamp(transform.position.x, -horLimit, horLimit);
+			float clampedLimitY = Mathf.Clamp(transform.position.y, -vertLimit, vertLimit);			
+			transform.position = new Vector3 (clampedLimitX, clampedLimitY, 0.0f);
 		}
 	}
 

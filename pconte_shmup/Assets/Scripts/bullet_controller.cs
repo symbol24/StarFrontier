@@ -16,7 +16,7 @@ public class bullet_controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(gameMgr.currentState == Game_Manager.gameState.playing){
-			transform.Translate (transform.up * speed * Time.deltaTime, Space.World);
+			transform.Translate (Vector3.up * speed * Time.deltaTime, Space.World);
 
 			//putting the bullets back into their respective STACK
 			if(owner == "player" && gameObject.activeInHierarchy && !gameObject.renderer.isVisible){
