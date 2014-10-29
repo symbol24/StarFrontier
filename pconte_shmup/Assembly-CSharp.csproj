@@ -57,6 +57,8 @@
      <Compile Include="Assets\Scripts\Main_Menu_Controller.cs" />
      <Compile Include="Assets\Scripts\Missle_Controller.cs" />
      <Compile Include="Assets\Scripts\Score_Controller.cs" />
+     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkillEvade.cs" />
      <Compile Include="Assets\Scripts\Star_Controller.cs" />
      <Compile Include="Assets\Scripts\Starfield_Controller.cs" />
      <Compile Include="Assets\Scripts\bullet_controller.cs" />

@@ -16,6 +16,8 @@ public class Boss_Controller : MonoBehaviour {
 	public GameObject exBlue;
 	public string target;
 	public GameObject[] cannonReferances;
+	public GameObject healthBar;
+	private float healthBarWidth;
 
 	// Use this for initialization
 	void Start () {

@@ -1,25 +1,30 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Boss_Controller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Skills\SkillEvade.cs">
     <Files>
-      <File FileName="Assets\Scripts\bullet_controller.cs" Line="6" Column="9" />
-      <File FileName="Assets\Scripts\Game_Manager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Launcher_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Button_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Life_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\main_ship.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Missle_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\cannon_controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Explosion_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Starfield_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Main_Menu_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\enemy_controller.cs" Line="94" Column="4" />
+      <File FileName="Assets\Scripts\Skills\SkillEvade.cs" Line="19" Column="4" />
+      <File FileName="Assets\Scripts\enemy_controller.cs" Line="82" Column="13" />
       <File FileName="Assets\Scripts\Score_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Star_Controller.cs" Line="47" Column="28" />
+      <File FileName="Assets\Scripts\Star_Controller.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Entities_Creator.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Enemy_Spawner_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Boss_Controller.cs" Line="29" Column="22" />
+      <File FileName="Assets\Scripts\Skills\Skill.cs" Line="15" Column="41" />
+      <File FileName="Assets\Scripts\main_ship.cs" Line="105" Column="53" />
+      <File FileName="Assets\Scripts\Starfield_Controller.cs" Line="91" Column="30" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Scripts" expanded="True">
+              <Node name="Skills" expanded="True">
+                <Node name="SkillEvade.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
