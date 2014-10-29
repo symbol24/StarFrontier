@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class enemy_controller : MonoBehaviour {
 	public int shipID;
-	public Game_Manager gameMgr;
+	private Game_Manager gameMgr;
 	public float limiterY;
 	public int eaiHP;
 	public int eaiArmor;
@@ -75,7 +75,7 @@ public class enemy_controller : MonoBehaviour {
 			Instantiate (exBlue, tempBullet.transform.position, tempBullet.transform.rotation);
 			Hit(tempBullet.damageValue);
 			tempBullet.gameObject.SetActive(false);
-			gameMgr.bullets.Push(tempBullet);
+			gameMgr.bulletsPlayer.Push(tempBullet);
 		}else if (coll.gameObject.GetComponent<Missle_Controller>() != null && coll.gameObject.GetComponent<Missle_Controller>().owner == target) {
 			Missle_Controller missile = coll.gameObject.GetComponent<Missle_Controller>();
 			Instantiate (exBlue, missile.transform.position, missile.transform.rotation);

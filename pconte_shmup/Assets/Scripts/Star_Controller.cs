@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Star_Controller : MonoBehaviour {
-	public Game_Manager gameMgr;
+	private Game_Manager gameMgr;
 	public Main_Menu_Controller mainMenuMgr;
 	public Starfield_Controller starfield;
 	public float speed;
@@ -51,7 +51,7 @@ public class Star_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Application.loadedLevelName == "MainGame" && gameMgr != null && gameMgr.currentState == Game_Manager.gameState.playing){
+		if((Application.loadedLevelName == "MainGame" || Application.loadedLevelName == "boss_prototype" ) && gameMgr != null && gameMgr.currentState == Game_Manager.gameState.playing){
 			MoveStar();
 		}else if(Application.loadedLevelName == "MainMenu" && mainMenuMgr != null & mainMenuMgr.currentState == Main_Menu_Controller.gameState.playing){
 			MoveStar();

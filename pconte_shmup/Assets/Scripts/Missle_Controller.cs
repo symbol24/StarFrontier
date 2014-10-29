@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Missle_Controller : MonoBehaviour {
-	public Game_Manager gameMgr;
+	private Game_Manager gameMgr;
 	public int damageValue;
 	public float speed;
 	public string target;

@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class cannon_controller : MonoBehaviour {
-	public Game_Manager gameMgr;
+	private Game_Manager gameMgr;
 	public float offset;
 	public float fireRate = 0.5F;
 	private float nextFire = 0.0F;
 	public KeyCode fireButton;
-	public GameObject referance;
+	public GameObject[] referance;
 //	private GameObject tempEAI;
 //	private GameObject[] allEAI;
 
@@ -21,10 +21,12 @@ public class cannon_controller : MonoBehaviour {
 		if(gameMgr.currentState == Game_Manager.gameState.playing){
 			if ((Input.GetKey(KeyCode.Space) || Input.GetKey(fireButton)) && Time.time > nextFire){
 				nextFire = Time.time + fireRate;
-				bullet_controller tempBullet = gameMgr.bullets.Pop();
-				tempBullet.transform.position = new Vector2(referance.transform.position.x, referance.transform.position.y);
-				tempBullet.transform.rotation = referance.transform.rotation;
-				tempBullet.gameObject.SetActive(true);
+				foreach(GameObject refer in referance){
+					bullet_controller tempBullet = gameMgr.bulletsPlayer.Pop();
+					tempBullet.transform.position = new Vector2(refer.transform.position.x, refer.transform.position.y);
+					tempBullet.transform.rotation = refer.transform.rotation;
+					tempBullet.gameObject.SetActive(true);
+				}
 			}
 		}
 	}

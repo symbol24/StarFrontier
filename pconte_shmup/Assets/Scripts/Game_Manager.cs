@@ -6,22 +6,11 @@ public class Game_Manager : MonoBehaviour {
 	//the player ship
 	public main_ship playerShip;
 
-	//the enemy ships
-	public enemy_controller[] eai;
-	private int eaiSelector = 0;
-	private int eaiCounter = 0;
-	public int[] eaiSelRange;
-	public float limiterY;
-	public float limiterX;
-	public float minSpawnRate;
-	public float maxSpawnRate;
-	private float nextSpawn = 0.0F;
-
 	//the player and enemy bullets
 	public int bulletAmount;
-	public bullet_controller bulletPrefab;
+	public bullet_controller bulletPrefabPlayer;
 	public bullet_controller bulletPrefabEAI;
-	public Stack<bullet_controller> bullets = new Stack<bullet_controller>();
+	public Stack<bullet_controller> bulletsPlayer = new Stack<bullet_controller>();
 	public Stack<bullet_controller> bulletsEAI = new Stack<bullet_controller>();
 	private bullet_controller tempBullet;
 
@@ -72,17 +61,8 @@ public class Game_Manager : MonoBehaviour {
 	
 	void Start(){
 		//creating bullets into stacks
-		for(int i = 0; i < bulletAmount; i++){
-			tempBullet = Instantiate(bulletPrefab, new Vector2(transform.position.x, transform.position.y), transform.rotation) as bullet_controller;
-			tempBullet.gameObject.SetActive(false);
-			bullets.Push(tempBullet);
-		}
-		
-		for(int i = 0; i < bulletAmount; i++){
-			tempBullet = Instantiate(bulletPrefabEAI, new Vector2(transform.position.x, transform.position.y), transform.rotation) as bullet_controller;
-			tempBullet.gameObject.SetActive(false);
-			bulletsEAI.Push(tempBullet);
-		}
+		bulletsPlayer = Entities_Creator.CreatAStackOfBullets (bulletPrefabPlayer, bulletAmount);
+		bulletsEAI = Entities_Creator.CreatAStackOfBullets (bulletPrefabEAI, bulletAmount);
 
 		//creating the life icons at top of screen
 		for(int i = 0; i < numbLives; i++){
@@ -101,21 +81,6 @@ public class Game_Manager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(currentState == gameState.playing){
-			//spawn enemies
-			if (Time.time > nextSpawn){
-				nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
-				float tempX = Random.Range(-limiterX, limiterX);
-				enemy_controller eaiClone;
-				eaiClone = Instantiate(eai[eaiSelector], new Vector2(tempX, transform.position.y + limiterY), transform.rotation) as enemy_controller;
-				eaiCounter++;
-
-				//addind a tank into the mix from time to time
-				if(eaiSelector != 1 && eaiCounter >= Random.Range(eaiSelRange[0], eaiSelRange[1])){
-					eaiSelector = 1;
-				}else{
-					eaiSelector = 0;
-				}
-			}
 
 			//open and close pause menu
 			if(Input.GetKeyDown("p") || Input.GetKeyDown(pauseButton)){

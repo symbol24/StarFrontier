@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Starfield_Controller : MonoBehaviour {
-	public Game_Manager gameMgr;
+	private Game_Manager gameMgr;
 	public Main_Menu_Controller mainMenuMgr;
 	public Star_Controller starPrefab;
 	public Stack<Star_Controller> starsTop = new Stack<Star_Controller>();
@@ -31,69 +31,12 @@ public class Starfield_Controller : MonoBehaviour {
 		}else if(Application.loadedLevelName == "MainMenu"){
 			mainMenuMgr = GameObject.Find ("MainMenuObj").GetComponent<Main_Menu_Controller> ();
 		}
-		int colorID = 0;
-		Star_Controller tempStar;
-		//top stars
-		for(int i = 0; i < starCount; i++){
-			tempStar = Instantiate(starPrefab, transform.position, transform.rotation) as Star_Controller;
-			tempStar.createStar(0, starSpeed[0], starColors[colorID], starScale[0]);
-			tempStar.gameObject.SetActive(false);
-			starsTop.Push(tempStar);
-			if(colorID == 4){
-				colorID = 0;
-			}else{
-				colorID++;
-			}
-		}
-		for(int i = 0; i < initialStars; i++){
-			tempStar = starsTop.Pop();
-			float tempX = Random.Range(-maxX, maxX);
-			float tempY = Random.Range(-maxY, maxY);
-			tempStar.transform.position = new Vector2(tempX, tempY);
-			tempStar.gameObject.SetActive(true);
-		}
-		//mid stars
-		for(int i = 0; i < starCount; i++){
-			tempStar = Instantiate(starPrefab, transform.position, transform.rotation) as Star_Controller;
-			tempStar.createStar(1, starSpeed[1], starColors[colorID], starScale[1]);
-			tempStar.gameObject.SetActive(false);
-			starsMid.Push(tempStar);
-			if(colorID == 0){
-				colorID++;
-			}else if(colorID == 1){
-				colorID++;
-			}else{
-				colorID = 0;
-			}
-		}
-		for(int i = 0; i < initialStars; i++){
-			tempStar = starsMid.Pop();
-			float tempX = Random.Range(-maxX, maxX);
-			float tempY = Random.Range(-maxY, maxY);
-			tempStar.transform.position = new Vector2(tempX, tempY);
-			tempStar.gameObject.SetActive(true);
-		}
-		//bottom stars
-		for(int i = 0; i < starCount; i++){
-			tempStar = Instantiate(starPrefab, transform.position, transform.rotation) as Star_Controller;
-			tempStar.createStar(2, starSpeed[2], starColors[colorID], starScale[2]);
-			tempStar.gameObject.SetActive(false);
-			starsBot.Push(tempStar);
-			if(colorID == 0){
-				colorID++;
-			}else if(colorID == 1){
-				colorID++;
-			}else{
-				colorID = 0;
-			}
-		}
-		for(int i = 0; i < initialStars; i++){
-			tempStar = starsBot.Pop();
-			float tempX = Random.Range(-maxX, maxX);
-			float tempY = Random.Range(-maxY, maxY);
-			tempStar.transform.position = new Vector2(tempX, tempY);
-			tempStar.gameObject.SetActive(true);
-		}
+
+		starsTop = Entities_Creator.CreatAStackOfStars (0, starPrefab, starCount, starColors, starSpeed, starScale, maxX, maxY);
+		starsMid = Entities_Creator.CreatAStackOfStars (1, starPrefab, starCount, starColors, starSpeed, starScale, maxX, maxY);
+		starsBot = Entities_Creator.CreatAStackOfStars (2, starPrefab, starCount, starColors, starSpeed, starScale, maxX, maxY);
+
+		CreateInitialStars ();
 	}
 	
 	// Update is called once per frame
@@ -104,7 +47,7 @@ public class Starfield_Controller : MonoBehaviour {
 			UnWarpStars();
 		}
 
-		if(Application.loadedLevelName == "MainGame"){
+		if(Application.loadedLevelName == "MainGame" || Application.loadedLevelName == "boss_prototype"){
 			if(gameMgr != null && gameMgr.currentState == Game_Manager.gameState.playing){
 				Stack<Star_Controller> tempsStarStack;
 				for(int i = 0; i < nextSpawn.Length; i++){
@@ -136,6 +79,29 @@ public class Starfield_Controller : MonoBehaviour {
 					}
 				}
 			}
+		}
+	}
+
+	private void CreateInitialStars(){
+		
+		Star_Controller tempStar;
+	
+		//top stars
+		for(int i = 0; i < initialStars; i++){
+			tempStar = starsTop.Pop();
+			tempStar.gameObject.SetActive(true);
+		}
+		//mid stars
+		
+		for(int i = 0; i < initialStars; i++){
+			tempStar = starsMid.Pop();
+			tempStar.gameObject.SetActive(true);
+		}
+		//bottom stars
+		
+		for(int i = 0; i < initialStars; i++){
+			tempStar = starsBot.Pop();
+			tempStar.gameObject.SetActive(true);
 		}
 	}
 

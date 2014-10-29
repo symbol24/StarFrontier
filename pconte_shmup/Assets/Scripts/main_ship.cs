@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class main_ship : MonoBehaviour {
-	public Game_Manager gameMgr;
+	private Game_Manager gameMgr;
 
 	//the player basic info
 	public int playerHP;
