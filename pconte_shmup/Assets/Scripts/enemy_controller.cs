@@ -19,7 +19,7 @@ public class enemy_controller : MonoBehaviour {
 	public int scoreValue;
 	public GameObject exBlue;
 	public string target;
-	public List<Skill> m_Skills;
+	public List<EAIBehaviors> m_Behaviors;
 
 	void Start(){
 		gameMgr = GameObject.Find ("GameManagerObj").GetComponent<Game_Manager> ();
@@ -34,6 +34,7 @@ public class enemy_controller : MonoBehaviour {
 				TankType();
 			}
 		}
+
 		if(transform.position.y < limiterY){
 			Destroy (gameObject);
 		}

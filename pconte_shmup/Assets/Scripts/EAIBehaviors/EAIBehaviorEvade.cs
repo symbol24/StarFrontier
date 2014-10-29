@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SkillEvade : Skill {
+public class EAIBehaviorEvade : EAIBehaviors {
 	
 	public enum enemyState{
 		normal,hiding,evading,
@@ -12,7 +12,14 @@ public class SkillEvade : Skill {
 	public float m_HideTimer;
 	public float m_Locator;
 
-	public void Update() {
+	protected override void Start(){
+		base.Start ();
+		m_State = enemyState.normal;
+	}
+
+	protected override void Update() {
+		base.Update ();
+		print(m_State);
 		switch (m_State) {
 		case enemyState.normal:
 			transform.Translate (Vector3.down * m_Controller.speed * Time.deltaTime, Space.World);

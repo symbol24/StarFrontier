@@ -20,15 +20,18 @@ public class bullet_controller : MonoBehaviour {
 
 			//putting the bullets back into their respective STACK
 			if(owner == "player" && gameObject.activeInHierarchy && !gameObject.renderer.isVisible){
-				gameObject.SetActive(false);
-				gameMgr.bulletsPlayer.Push(gameObject.GetComponent<bullet_controller>());
+				pushBullet(gameMgr.bulletsPlayer);
 
 			}
 			if(owner == "enemy" && gameObject.activeInHierarchy && !gameObject.renderer.isVisible){
-				gameObject.SetActive(false);
-				gameMgr.bulletsEAI.Push(gameObject.GetComponent<bullet_controller>());
+				pushBullet(gameMgr.bulletsEAI);
 				
 			}
 		}
+	}
+
+	void pushBullet(Stack<bullet_controller> BulletStack){
+		gameObject.SetActive(false);
+		BulletStack.Push(gameObject.GetComponent<bullet_controller>());
 	}
 }
