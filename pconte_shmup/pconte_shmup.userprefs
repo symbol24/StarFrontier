@@ -1,26 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EAIBehaviors\EAIBehaviorEvade.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\enemy_controller.cs">
     <Files>
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorEvade.cs" Line="20" Column="20" />
-      <File FileName="Assets\Scripts\enemy_controller.cs" Line="37" Column="1" />
-      <File FileName="Assets\Scripts\Score_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Star_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Entities_Creator.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemy_Spawner_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\main_ship.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Starfield_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\bullet_controller.cs" Line="11" Column="2" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviors.cs" Line="15" Column="11" />
+      <File FileName="Assets\Scripts\enemy_controller.cs" Line="16" Column="9" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorEvade.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviors.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorSimpleShoot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorSimpleMove.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Scripts" expanded="True">
-              <Node name="EAIBehaviors" expanded="True">
-                <Node name="EAIBehaviorEvade.cs" selected="True" />
-              </Node>
+              <Node name="EAIBehaviors" expanded="True" />
+              <Node name="enemy_controller.cs" selected="True" />
             </Node>
           </Node>
         </State>

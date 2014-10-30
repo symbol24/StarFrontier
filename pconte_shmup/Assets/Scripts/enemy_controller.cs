@@ -3,40 +3,39 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class enemy_controller : MonoBehaviour {
-	public int shipID;
+
 	public Game_Manager gameMgr;
 	public float limiterY;
 	public int eaiHP;
 	public int eaiArmor;
-	public float speed;
-	public float evadSpeed;
 	public float lifeTimer;
-	public bullet_controller tempBullet;
-	public float offset;
-	public float minFireRate;
-	public float maxFireRate;
-	public float nextFire = 0.0F;
 	public int scoreValue;
 	public GameObject exBlue;
 	public string target;
-	public List<EAIBehaviors> m_Behaviors;
+	public EAIBehaviors[] m_BehaviorsPrefabs;
+	private EAIBehaviors[] m_BehaviorsInstances;
 
 	void Start(){
 		gameMgr = GameObject.Find ("GameManagerObj").GetComponent<Game_Manager> ();
+		m_BehaviorsInstances = new EAIBehaviors[m_BehaviorsPrefabs.Length];
+		for(int i = 0; i < m_BehaviorsPrefabs.Length; i++){
+			m_BehaviorsInstances[i] = Instantiate(m_BehaviorsPrefabs[i], transform.position, transform.rotation) as EAIBehaviors;
+			m_BehaviorsInstances[i].Init(this);
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(gameMgr.currentState == Game_Manager.gameState.playing){
-			if(shipID == 0){
-				EvaderType();
-			}else if(shipID == 1){
-				TankType();
+			foreach(EAIBehaviors behavior in m_BehaviorsInstances){
+				if(behavior != null){
+					behavior.UpdateBehavior();
+				}
 			}
-		}
 
-		if(transform.position.y < limiterY){
-			Destroy (gameObject);
+			if(transform.position.y < limiterY){
+				DestroyObjectAndBehaviors();
+			}
 		}
 	}
 
@@ -45,12 +44,22 @@ public class enemy_controller : MonoBehaviour {
 		if (gameObject.renderer.isVisible) {
 			eaiHP -= MitigateDamage (damage);
 			if (eaiHP <= 0) {
-				Destroy (gameObject);
+				DestroyObjectAndBehaviors();
 				gameMgr.UpdateScore(scoreValue);
 			}else{
 
 			}
 		}
+	}
+
+	public void DestroyObjectAndBehaviors(){
+		gameObject.SetActive (false);
+		foreach (EAIBehaviors behavior in m_BehaviorsInstances) {
+			if(behavior != null){
+				Destroy(behavior);
+			}
+		}
+		Destroy (gameObject);
 	}
 	
 	private int MitigateDamage(int damage) {
@@ -60,9 +69,17 @@ public class enemy_controller : MonoBehaviour {
 		return damage - eaiArmor;
 	}
 	
-	void OnTriggerEnter2D(Collider2D coll) {
+	public void OnTriggerEnter2D(Collider2D coll) {
 		if (coll.gameObject.GetComponent<bullet_controller>() != null && coll.gameObject.GetComponent<bullet_controller>().owner == target) {
-			tempBullet = coll.gameObject.GetComponent<bullet_controller>();
+			foreach(EAIBehaviors behavior in m_BehaviorsInstances){
+				if(behavior != null){
+					EAIBehaviorEvade evader = behavior.GetComponentInChildren<EAIBehaviorEvade>();
+					if(evader != null){
+						evader.EvaderHit();
+					}
+				}
+			}
+			bullet_controller tempBullet = coll.gameObject.GetComponent<bullet_controller>();
 			Instantiate (exBlue, tempBullet.transform.position, tempBullet.transform.rotation);
 			Hit(tempBullet.damageValue);
 			tempBullet.gameObject.SetActive(false);
@@ -74,23 +91,5 @@ public class enemy_controller : MonoBehaviour {
 			missile.gameObject.SetActive(false);
 			Destroy(coll.gameObject);
 		}
-	}
-
-	//evade mini ai behavior for the pink sprite ship
-	private void EvaderType(){
-	}
-
-	//the yellowish sprite only move forwards but is slower and has more life
-	private void TankType ()
-	{
-		transform.Translate (Vector3.down * speed * Time.deltaTime, Space.World);
-		
-		if (Time.time > nextFire){
-			nextFire = Time.time + Random.Range(minFireRate, maxFireRate);
-			tempBullet = gameMgr.bulletsEAI.Pop();
-			tempBullet.transform.position = new Vector2(transform.position.x, transform.position.y - offset);
-			tempBullet.gameObject.SetActive(true);
-		}
-	}
-	
+	}	
 }

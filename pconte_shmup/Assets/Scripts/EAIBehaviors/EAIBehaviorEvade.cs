@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EAIBehaviorEvade : EAIBehaviors {
 	
+	public float evadSpeed = 5.0f;
+
 	public enum enemyState{
 		normal,hiding,evading,
 	}
@@ -12,27 +14,19 @@ public class EAIBehaviorEvade : EAIBehaviors {
 	public float m_HideTimer;
 	public float m_Locator;
 
-	protected override void Start(){
+	public override void Start(){
 		base.Start ();
 		m_State = enemyState.normal;
+		transform.position = m_Controller.transform.position;
 	}
 
-	protected override void Update() {
-		base.Update ();
-		print(m_State);
+	public override void UpdateBehavior() {
 		switch (m_State) {
 		case enemyState.normal:
-			transform.Translate (Vector3.down * m_Controller.speed * Time.deltaTime, Space.World);
-			
-			if (Time.time > m_Controller.nextFire){
-				m_Controller.nextFire = Time.time + Random.Range(m_Controller.minFireRate, m_Controller.maxFireRate);
-				m_Controller.tempBullet = m_Controller.gameMgr.bulletsEAI.Pop();
-				m_Controller.tempBullet.transform.position = new Vector2(transform.position.x, transform.position.y - m_Controller.offset);
-				m_Controller.tempBullet.gameObject.SetActive(true);
-			}
+
 			break;
 		case enemyState.hiding:
-			transform.Translate (Vector3.down * Time.deltaTime, Space.World);
+			m_Controller.transform.Translate (Vector3.down * Time.deltaTime, Space.World);
 			if(Time.time > m_StateTimer){
 				m_State = enemyState.normal;
 			}
@@ -46,18 +40,15 @@ public class EAIBehaviorEvade : EAIBehaviors {
 				if(m_Locator < 0.0f){
 					direction = Vector3.right;
 				}
-				transform.Translate (direction * m_Controller.evadSpeed * Time.deltaTime, Space.World);
+				m_Controller.transform.Translate (direction * evadSpeed * Time.deltaTime, Space.World);
 			}
 			break;
 		}
-
 	}
-
-	public float m_EvadeTime = 2.0f;
 
 	public void EvaderHit(){
 		m_StateTimer = Time.time + m_EvadeTimer;
-		m_Locator = transform.position.x;
+		m_Locator = m_Controller.transform.position.x;
 		m_State = enemyState.evading;
 	}
 }

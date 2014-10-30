@@ -8,11 +8,16 @@ public class EAIBehaviors : MonoBehaviour{
 		m_Controller = controller;
 	}
 
-	protected virtual void Start(){
+	public virtual void Start(){
+		transform.position = m_Controller.transform.position;
 
 	}
 
-	protected virtual void Update(){
+	public virtual void Update(){
+
+	}
+
+	public virtual void UpdateBehavior(){
 
 	}
 	
