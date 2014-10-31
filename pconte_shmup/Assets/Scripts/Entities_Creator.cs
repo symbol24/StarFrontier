@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
 public class Entities_Creator : MonoBehaviour {
-	public static Stack<bullet_controller> bullets = new Stack<bullet_controller>();
+	public static Stack<ProjectileController> bullets = new Stack<ProjectileController>();
 	public static Stack<Star_Controller> stars = new Stack<Star_Controller>();
 
 	// Use this for initialization
@@ -16,11 +16,11 @@ public class Entities_Creator : MonoBehaviour {
 	
 	}
 
-	public static Stack<bullet_controller> CreatAStackOfBullets(bullet_controller bulletPrefabToUse, int amountOfBullets){
-		bullets = new Stack<bullet_controller>();
+	public static Stack<ProjectileController> CreatAStackOfBullets(ProjectileController bulletPrefabToUse, int amountOfBullets){
+		bullets = new Stack<ProjectileController>();
 
 		for(int i = 0; i < amountOfBullets; i++){
-			bullet_controller oneBullet = Instantiate(bulletPrefabToUse, bulletPrefabToUse.transform.position, bulletPrefabToUse.transform.rotation) as bullet_controller;
+			ProjectileController oneBullet = Instantiate(bulletPrefabToUse, bulletPrefabToUse.transform.position, bulletPrefabToUse.transform.rotation) as ProjectileController;
 			oneBullet.gameObject.SetActive(false);
 			bullets.Push(oneBullet);
 		}

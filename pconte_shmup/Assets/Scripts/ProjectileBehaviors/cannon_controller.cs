@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -22,7 +22,7 @@ public class cannon_controller : MonoBehaviour {
 			if ((Input.GetKey(KeyCode.Space) || Input.GetKey(fireButton)) && Time.time > nextFire){
 				nextFire = Time.time + fireRate;
 				foreach(GameObject refer in referance){
-					bullet_controller tempBullet = gameMgr.bulletsPlayer.Pop();
+					ProjectileController tempBullet = gameMgr.bulletsPlayer.Pop();
 					tempBullet.transform.position = new Vector2(refer.transform.position.x, refer.transform.position.y);
 					tempBullet.transform.rotation = refer.transform.rotation;
 					tempBullet.gameObject.SetActive(true);
@@ -30,27 +30,4 @@ public class cannon_controller : MonoBehaviour {
 			}
 		}
 	}
-
-
-	//reference for homing shots
-//	void HomingShots(){
-//		allEAI = GameObject.FindGameObjectsWithTag("enemyship");
-//		foreach(GameObject gTemp in allEAI){
-//			float distance = (referance.transform.position - gTemp.transform.position).sqrMagnitude;
-//			if(tempEAI != null){
-//				if(gTemp.transform.position.y > referance.transform.position.y && distance > 0 && gTemp.transform.position.sqrMagnitude < tempEAI.transform.position.sqrMagnitude){
-//					tempEAI = gTemp;
-//				}
-//			}else{
-//				tempEAI = gTemp;
-//			}
-//		}
-//		if (tempEAI != null) {
-//			Vector3 tempV = (tempEAI.transform.position - referance.transform.position).normalized;
-//			float angle = Mathf.Atan2(tempV.y, tempV.x)*Mathf.Rad2Deg;
-//			Quaternion rotQ = new Quaternion ();
-//			rotQ.eulerAngles = new Vector3(0,0,angle-90);
-//			transform.rotation = rotQ;
-//		}
-//	}
 }

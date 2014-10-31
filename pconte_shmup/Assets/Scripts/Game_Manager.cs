@@ -8,11 +8,11 @@ public class Game_Manager : MonoBehaviour {
 
 	//the player and enemy bullets
 	public int bulletAmount;
-	public bullet_controller bulletPrefabPlayer;
-	public bullet_controller bulletPrefabEAI;
-	public Stack<bullet_controller> bulletsPlayer = new Stack<bullet_controller>();
-	public Stack<bullet_controller> bulletsEAI = new Stack<bullet_controller>();
-	private bullet_controller tempBullet;
+	public ProjectileController bulletPrefabPlayer;
+	public ProjectileController bulletPrefabEAI;
+	public Stack<ProjectileController> bulletsPlayer = new Stack<ProjectileController>();
+	public Stack<ProjectileController> bulletsEAI = new Stack<ProjectileController>();
+	private ProjectileController tempBullet;
 
 	//game state enum
 	public enum gameState{

@@ -9,7 +9,7 @@ public class Launcher_Controller : MonoBehaviour {
 	private float nextFire = 0.0F;
 	public KeyCode fireButton;
 	public GameObject[] referance;
-	public Missle_Controller missilePrefab;
+	public ProjectileController missilePrefab;
 	
 	void Start(){
 		gameMgr = GameObject.Find ("GameManagerObj").GetComponent<Game_Manager> ();
@@ -21,7 +21,7 @@ public class Launcher_Controller : MonoBehaviour {
 			if ((Input.GetKey(KeyCode.Space) || Input.GetKey(fireButton)) && Time.time > nextFire){
 				nextFire = Time.time + fireRate;
 				foreach(GameObject refer in referance){
-					Missle_Controller missile = Instantiate(missilePrefab, refer.transform.position, refer.transform.rotation) as Missle_Controller;
+					ProjectileController missile = Instantiate(missilePrefab, refer.transform.position, refer.transform.rotation) as ProjectileController;
 				}
 			}
 		}

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -102,8 +102,8 @@ public class main_ship : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D coll) {
-		if (coll.gameObject.GetComponent<bullet_controller>() != null && coll.gameObject.GetComponent<bullet_controller>().owner == target) {
-			bullet_controller tempBullet = coll.gameObject.GetComponent<bullet_controller>();
+		if (coll.gameObject.GetComponent<ProjectileController>() != null && coll.gameObject.GetComponent<ProjectileController>().owner == target) {
+			ProjectileController tempBullet = coll.gameObject.GetComponent<ProjectileController>();
 			tempBullet.gameObject.SetActive(false);
 			gameMgr.bulletsEAI.Push(tempBullet);
 			Instantiate (pinkExplosionPrefab, tempBullet.transform.position, tempBullet.transform.rotation);

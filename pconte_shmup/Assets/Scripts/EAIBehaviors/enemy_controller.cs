@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -70,7 +70,7 @@ public class enemy_controller : MonoBehaviour {
 	}
 	
 	public void OnTriggerEnter2D(Collider2D coll) {
-		if (coll.gameObject.GetComponent<bullet_controller>() != null && coll.gameObject.GetComponent<bullet_controller>().owner == target) {
+		if (coll.gameObject.GetComponent<ProjectileController>() != null && coll.gameObject.GetComponent<ProjectileController>().owner == target) {
 			foreach(EAIBehaviors behavior in m_BehaviorsInstances){
 				if(behavior != null){
 					EAIBehaviorEvade evader = behavior.GetComponentInChildren<EAIBehaviorEvade>();
@@ -79,7 +79,7 @@ public class enemy_controller : MonoBehaviour {
 					}
 				}
 			}
-			bullet_controller tempBullet = coll.gameObject.GetComponent<bullet_controller>();
+			ProjectileController tempBullet = coll.gameObject.GetComponent<ProjectileController>();
 			Instantiate (exBlue, tempBullet.transform.position, tempBullet.transform.rotation);
 			Hit(tempBullet.damageValue);
 			tempBullet.gameObject.SetActive(false);

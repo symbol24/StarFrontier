@@ -5,7 +5,7 @@ public class EAIBehaviorSimpleShoot : EAIBehaviors {
 	public float minFireRate = 1.0f;
 	public float maxFireRate = 2.0f;
 	public float nextFire = 0.0F;
-	public bullet_controller tempBullet;
+	public ProjectileController tempBullet;
 	public float offset;
 
 	// Use this for initialization
