@@ -16,6 +16,6 @@ public class ProjectileBehaviorSimpleMoveDown : ProjectileBehavior {
 
 	public override void UpdateBehavior (){
 		base.UpdateBehavior ();
-	 	m_Controller.transform.Translate (Vector3.down * m_BulletSpeed * Time.deltaTime, Space.World);
+	 	m_Controller.transform.Translate (Vector3.down * m_BulletSpeed * Time.deltaTime, Space.Self);
 	}
 }

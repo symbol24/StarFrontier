@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class EAIBehaviorSimpleShoot : EAIBehaviors {
@@ -18,7 +18,7 @@ public class EAIBehaviorSimpleShoot : EAIBehaviors {
 	public override void UpdateBehavior() {
 		if (Time.time > nextFire){
 			nextFire = Time.time + Random.Range(minFireRate, maxFireRate);
-			tempBullet = m_Controller.gameMgr.bulletsEAI.Pop();
+			tempBullet = m_Controller.gameMgr.m_BulletsEAI.Pop();
 			tempBullet.transform.position = new Vector2(m_Controller.transform.position.x, m_Controller.transform.position.y - offset);
 			tempBullet.gameObject.SetActive(true);
 		}

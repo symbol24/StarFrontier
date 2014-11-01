@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ProjectileBehavior : MonoBehaviour {
 	protected ProjectileController m_Controller;
+	public string m_Type = "bullet";
 	
 	public void Init (ProjectileController controller) {
 		m_Controller = controller;

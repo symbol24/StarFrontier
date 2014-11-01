@@ -1,16 +1,16 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class ProjectileBehaviorHoming : ProjectileBehavior {
 
-	private enemy_controller m_HomingTargetOne;
+	private EnemyController m_HomingTargetOne;
 	public float m_Speed = 5.0f;
-	public string type = "missile";
 
 	// Use this for initialization
 	public override void Start () {
-		Object[] allEAI = GameObject.FindObjectsOfType (typeof(enemy_controller));
-		foreach (enemy_controller ec in allEAI) {
+		m_Type = "missile";
+		Object[] allEAI = GameObject.FindObjectsOfType (typeof(EnemyController));
+		foreach (EnemyController ec in allEAI) {
 			if(ec != null){
 				float distance = (m_Controller.transform.position - ec.transform.position).sqrMagnitude;
 				if(m_HomingTargetOne != null){

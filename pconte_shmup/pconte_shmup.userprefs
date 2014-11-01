@@ -1,33 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ProjectileBehaviors\ProjectileBehaviorHoming.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EAIBehaviors\EnemyController.cs">
     <Files>
-      <File FileName="Assets\Scripts\ProjectileBehaviors\Launcher_Controller.cs" Line="20" Column="30" />
-      <File FileName="Assets\Scripts\ProjectileBehaviors\ProjectileController.cs" Line="19" Column="13" />
-      <File FileName="Assets\Scripts\ProjectileBehaviors\ProjectileBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ProjectileBehaviors\ProjectileBehaviorSimpleMoveDown.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ProjectileBehaviors\ProjectileBehaviorSimpleMoveUp.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EAIBehaviors\enemy_controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviors.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ProjectileBehaviors\Missle_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ProjectileBehaviors\ProjectileBehaviorHoming.cs" Line="7" Column="30" />
-      <File FileName="Assets\Scripts\ProjectileBehaviors\cannon_controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="14" Column="32" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="46" Column="27" />
+      <File FileName="Assets\Scripts\CanonScripts\CannonController.cs" Line="13" Column="15" />
+      <File FileName="Assets\Scripts\ShieldController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ProjectileBehaviors\ProjectileController.cs" Line="9" Column="35" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EnemyController.cs" Line="11" Column="24" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorSpreadShotTest.cs" Line="10" Column="2" />
+      <File FileName="Assets\Scripts\ProjectileBehaviors\ProjectileBehaviorSimpleMoveUp.cs" Line="16" Column="2" />
+      <File FileName="Assets\Scripts\ProjectileBehaviors\ProjectileBehaviorSimpleMoveDown.cs" Line="18" Column="26" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Scripts" expanded="True">
-              <Node name="EAIBehaviors" expanded="True" />
-              <Node name="Menus" expanded="True" />
-              <Node name="ProjectileBehaviors" expanded="True">
-                <Node name="ProjectileBehaviorHoming.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

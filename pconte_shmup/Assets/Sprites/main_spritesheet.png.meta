@@ -1,69 +1,6 @@
 fileFormatVersion: 2
 guid: 8b34a3219d0c6c54faffe6aaff1cf812
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: EAI_pink_left
-    21300002: EAI_pink_center
-    21300004: EAI_pink_right
-    21300006: EAI_darkyellow_left
-    21300008: EAI_darkyellow_center
-    21300010: EAI_darkyellow_right
-    21300012: EAI_green_left
-    21300014: EAI_green_center
-    21300016: EAI_green_right
-    21300018: EAI_lightyellow_left
-    21300020: EAI_lightyellow_right
-    21300022: EAI_lightyellow_right
-    21300024: EAI_orange_left
-    21300026: EAI_orange_center
-    21300028: EAI_orange_right
-    21300030: EAI_purple_left
-    21300032: EAI_purple_center
-    21300034: EAI_purple_right
-    21300036: EAI_smallorange_left
-    21300038: EAI_smallorange_center
-    21300040: EAI_smallorange_right
-    21300042: EAI_smallgreen_orange
-    21300044: EAI_smallgreen_center
-    21300046: EAI_smallgreen_right
-    21300048: main_ship_left
-    21300050: main_ship_center
-    21300052: main_ship_right
-    21300054: expl_pink_01
-    21300056: expl_pink_02
-    21300058: expl_pink_03
-    21300060: expl_pink_04
-    21300062: expl_pink_05
-    21300064: expl_pink_06
-    21300066: expl_pink_07
-    21300068: expl_pink_08
-    21300070: expl_pink_09
-    21300072: expl_pink_10
-    21300074: expl_blue_01
-    21300076: expl_blue_02
-    21300078: expl_blue_03
-    21300080: expl_blue_04
-    21300082: expl_blue_05
-    21300084: expl_blue_06
-    21300086: expl_blue_07
-    21300088: expl_blue_08
-    21300090: expl_blue_09
-    21300092: expl_blue_10
-    21300094: box_green
-    21300096: cross_green
-    21300098: box_blue
-    21300100: box_orange
-    21300102: box_light_red
-    21300104: box_corner_red
-    21300106: ball_red
-    21300108: bullet_orange
-    21300110: ext_right
-    21300112: bullet_red
-    21300114: ext_left
-    21300116: bullet_blue
-    21300118: expl_blue_11
-    21300120: expl_pink_11
-    21300122: cannon
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -98,8 +35,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 60
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings:
@@ -118,7 +54,6 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_pink_center
       rect:
         serializedVersion: 2
@@ -128,7 +63,6 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_pink_right
       rect:
         serializedVersion: 2
@@ -138,7 +72,6 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_darkyellow_left
       rect:
         serializedVersion: 2
@@ -148,7 +81,6 @@ TextureImporter:
         height: 25
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_darkyellow_center
       rect:
         serializedVersion: 2
@@ -158,7 +90,6 @@ TextureImporter:
         height: 25
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_darkyellow_right
       rect:
         serializedVersion: 2
@@ -168,7 +99,6 @@ TextureImporter:
         height: 25
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_green_left
       rect:
         serializedVersion: 2
@@ -178,7 +108,6 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_green_center
       rect:
         serializedVersion: 2
@@ -188,7 +117,6 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_green_right
       rect:
         serializedVersion: 2
@@ -198,7 +126,6 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_lightyellow_left
       rect:
         serializedVersion: 2
@@ -208,7 +135,6 @@ TextureImporter:
         height: 21
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_lightyellow_right
       rect:
         serializedVersion: 2
@@ -218,7 +144,6 @@ TextureImporter:
         height: 21
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_lightyellow_right
       rect:
         serializedVersion: 2
@@ -228,7 +153,6 @@ TextureImporter:
         height: 21
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_orange_left
       rect:
         serializedVersion: 2
@@ -238,7 +162,6 @@ TextureImporter:
         height: 25
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_orange_center
       rect:
         serializedVersion: 2
@@ -248,7 +171,6 @@ TextureImporter:
         height: 25
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_orange_right
       rect:
         serializedVersion: 2
@@ -258,7 +180,6 @@ TextureImporter:
         height: 25
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_purple_left
       rect:
         serializedVersion: 2
@@ -268,7 +189,6 @@ TextureImporter:
         height: 21
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_purple_center
       rect:
         serializedVersion: 2
@@ -278,7 +198,6 @@ TextureImporter:
         height: 21
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_purple_right
       rect:
         serializedVersion: 2
@@ -288,7 +207,6 @@ TextureImporter:
         height: 21
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_smallorange_left
       rect:
         serializedVersion: 2
@@ -298,7 +216,6 @@ TextureImporter:
         height: 17
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_smallorange_center
       rect:
         serializedVersion: 2
@@ -308,7 +225,6 @@ TextureImporter:
         height: 17
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_smallorange_right
       rect:
         serializedVersion: 2
@@ -318,7 +234,6 @@ TextureImporter:
         height: 17
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_smallgreen_orange
       rect:
         serializedVersion: 2
@@ -328,7 +243,6 @@ TextureImporter:
         height: 17
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_smallgreen_center
       rect:
         serializedVersion: 2
@@ -338,7 +252,6 @@ TextureImporter:
         height: 17
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: EAI_smallgreen_right
       rect:
         serializedVersion: 2
@@ -348,7 +261,6 @@ TextureImporter:
         height: 17
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: main_ship_left
       rect:
         serializedVersion: 2
@@ -358,7 +270,6 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: main_ship_center
       rect:
         serializedVersion: 2
@@ -368,7 +279,6 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: main_ship_right
       rect:
         serializedVersion: 2
@@ -378,7 +288,6 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_pink_01
       rect:
         serializedVersion: 2
@@ -388,7 +297,6 @@ TextureImporter:
         height: 20
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_pink_02
       rect:
         serializedVersion: 2
@@ -398,7 +306,6 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_pink_03
       rect:
         serializedVersion: 2
@@ -408,7 +315,6 @@ TextureImporter:
         height: 37
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_pink_04
       rect:
         serializedVersion: 2
@@ -418,7 +324,6 @@ TextureImporter:
         height: 37
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_pink_05
       rect:
         serializedVersion: 2
@@ -428,7 +333,6 @@ TextureImporter:
         height: 37
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_pink_06
       rect:
         serializedVersion: 2
@@ -438,7 +342,6 @@ TextureImporter:
         height: 35
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_pink_07
       rect:
         serializedVersion: 2
@@ -448,7 +351,6 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_pink_08
       rect:
         serializedVersion: 2
@@ -458,7 +360,6 @@ TextureImporter:
         height: 24
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_pink_09
       rect:
         serializedVersion: 2
@@ -468,7 +369,6 @@ TextureImporter:
         height: 18
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_pink_10
       rect:
         serializedVersion: 2
@@ -478,7 +378,6 @@ TextureImporter:
         height: 12
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_blue_01
       rect:
         serializedVersion: 2
@@ -488,7 +387,6 @@ TextureImporter:
         height: 20
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_blue_02
       rect:
         serializedVersion: 2
@@ -498,7 +396,6 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_blue_03
       rect:
         serializedVersion: 2
@@ -508,7 +405,6 @@ TextureImporter:
         height: 37
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_blue_04
       rect:
         serializedVersion: 2
@@ -518,7 +414,6 @@ TextureImporter:
         height: 37
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_blue_05
       rect:
         serializedVersion: 2
@@ -528,7 +423,6 @@ TextureImporter:
         height: 37
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_blue_06
       rect:
         serializedVersion: 2
@@ -538,7 +432,6 @@ TextureImporter:
         height: 35
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_blue_07
       rect:
         serializedVersion: 2
@@ -548,7 +441,6 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_blue_08
       rect:
         serializedVersion: 2
@@ -558,7 +450,6 @@ TextureImporter:
         height: 24
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_blue_09
       rect:
         serializedVersion: 2
@@ -568,7 +459,6 @@ TextureImporter:
         height: 18
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_blue_10
       rect:
         serializedVersion: 2
@@ -578,7 +468,6 @@ TextureImporter:
         height: 12
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: box_green
       rect:
         serializedVersion: 2
@@ -588,7 +477,6 @@ TextureImporter:
         height: 10
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: cross_green
       rect:
         serializedVersion: 2
@@ -598,7 +486,6 @@ TextureImporter:
         height: 10
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: box_blue
       rect:
         serializedVersion: 2
@@ -608,7 +495,6 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: box_orange
       rect:
         serializedVersion: 2
@@ -618,7 +504,6 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: box_light_red
       rect:
         serializedVersion: 2
@@ -628,7 +513,6 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: box_corner_red
       rect:
         serializedVersion: 2
@@ -638,7 +522,6 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: ball_red
       rect:
         serializedVersion: 2
@@ -648,7 +531,6 @@ TextureImporter:
         height: 7
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: bullet_orange
       rect:
         serializedVersion: 2
@@ -658,7 +540,6 @@ TextureImporter:
         height: 11
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: ext_right
       rect:
         serializedVersion: 2
@@ -668,7 +549,6 @@ TextureImporter:
         height: 13
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: bullet_red
       rect:
         serializedVersion: 2
@@ -678,7 +558,6 @@ TextureImporter:
         height: 11
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: ext_left
       rect:
         serializedVersion: 2
@@ -688,7 +567,6 @@ TextureImporter:
         height: 13
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: bullet_blue
       rect:
         serializedVersion: 2
@@ -698,7 +576,6 @@ TextureImporter:
         height: 9
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_blue_11
       rect:
         serializedVersion: 2
@@ -708,7 +585,6 @@ TextureImporter:
         height: 7
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: expl_pink_11
       rect:
         serializedVersion: 2
@@ -718,7 +594,6 @@ TextureImporter:
         height: 7
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: cannon
       rect:
         serializedVersion: 2
@@ -728,6 +603,5 @@ TextureImporter:
         height: 12
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

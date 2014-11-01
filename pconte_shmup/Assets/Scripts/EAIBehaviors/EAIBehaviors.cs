@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class EAIBehaviors : MonoBehaviour{
-	protected enemy_controller m_Controller;
+	protected EnemyController m_Controller;
 
-	public void Init (enemy_controller controller) {
+	public void Init (EnemyController controller) {
 		m_Controller = controller;
 	}
 

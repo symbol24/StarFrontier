@@ -16,6 +16,6 @@ public class ProjectileBehaviorSimpleMoveUp : ProjectileBehavior {
 
 	public override void UpdateBehavior (){
 		base.UpdateBehavior ();
-		m_Controller.transform.Translate (Vector3.up * m_BulletSpeed * Time.deltaTime, Space.World);
+		m_Controller.transform.Translate (Vector2.up * m_BulletSpeed * Time.deltaTime, Space.Self);
 	}
 }
