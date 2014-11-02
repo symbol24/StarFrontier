@@ -8,12 +8,8 @@ public class GameManager : MonoBehaviour {
 
 	//the player and enemy bullets
 	public int m_BulletAmount;
-	public ProjectileController m_BulletPrefabPlayerBasic;
-	public ProjectileController m_BulletPrefabPlayerMissile;
-	public ProjectileController m_BulletPrefabEAI;
-	public Stack<ProjectileController> m_BulletsPlayer = new Stack<ProjectileController>();
-	public Stack<ProjectileController> m_MissilesPlayer = new Stack<ProjectileController>();
-	public Stack<ProjectileController> m_BulletsEAI = new Stack<ProjectileController>();
+	public ProjectileController[] m_ProjectilePrefabs;
+	public Stack<ProjectileController>[] m_ProjectileStacks;
 
 	//game state enum
 	public enum gameState{
@@ -58,9 +54,10 @@ public class GameManager : MonoBehaviour {
 	
 	void Start(){
 		//creating bullets into stacks
-		m_BulletsPlayer = EntitiesCreator.CreatAStackOfBullets (m_BulletPrefabPlayerBasic, m_BulletAmount);
-		m_MissilesPlayer = EntitiesCreator.CreatAStackOfBullets (m_BulletPrefabPlayerMissile, m_BulletAmount);
-		m_BulletsEAI = EntitiesCreator.CreatAStackOfBullets (m_BulletPrefabEAI, m_BulletAmount);
+		m_ProjectileStacks = new Stack<ProjectileController>[m_ProjectilePrefabs.Length];
+		for(int i = 0; i < m_ProjectilePrefabs.Length; i++){
+			m_ProjectileStacks[i] = EntitiesCreator.CreatAStackOfBullets (m_ProjectilePrefabs[i], m_BulletAmount);
+		}
 
 		//creating the life icons at top of screen
 		m_LifeIconsDisplayed = new GameObject[m_NumberOfLives];

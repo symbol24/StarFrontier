@@ -38,29 +38,14 @@ public class EntitiesCreator : MonoBehaviour {
 		}
 		return stars;
 	}
-
-	public static string GetTypeOfBullet(ProjectileController currentBullet){
-		string bulletType = "bullet";
-		foreach(ProjectileBehavior behavior in currentBullet.m_ProjectileBehaviorInstances){
-			if(behavior.m_Type != "bullet"){
-				bulletType = behavior.m_Type;
-			}
-		}
-		return bulletType;
-	}
 	
 	public static Stack<ProjectileController> GetStackToUpdate(ProjectileController currentBullet, GameManager gameManager){
-		Stack<ProjectileController> StackToUpdate = new Stack<ProjectileController>();
-		string bulletType = GetTypeOfBullet(currentBullet);
-		if(currentBullet.m_Owner == "player"){
-			if(bulletType == "missile"){
-				StackToUpdate = gameManager.m_MissilesPlayer;
-			}else{
-				StackToUpdate = gameManager.m_BulletsPlayer;
+		Stack<ProjectileController> StackToReturn = new Stack<ProjectileController>();
+		foreach(Stack<ProjectileController> StackToCheck in gameManager.m_ProjectileStacks){
+			if(currentBullet.m_Owner == StackToCheck.Peek().m_Owner && currentBullet.m_Type == StackToCheck.Peek().m_Type){
+				StackToReturn = StackToCheck;
 			}
-		}else if(currentBullet.m_Owner == "enemy"){
-			StackToUpdate = gameManager.m_BulletsEAI;
 		}
-		return StackToUpdate;
+		return StackToReturn;
 	}
 }

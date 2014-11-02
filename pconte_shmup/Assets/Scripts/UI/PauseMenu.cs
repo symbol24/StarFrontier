@@ -8,11 +8,13 @@ public class PauseMenu : MonoBehaviour {
 	public Vector3[] m_PauseMenuLocations;
 	private int m_MenuPosID = 0;
 	private float m_MenuTimer = 0.0f;
+	private string m_CurrentLevelName;
 
 	// Use this for initialization
 	void Start () {
 		m_GameManager = GameObject.Find ("GameManagerObj").GetComponent<GameManager> ();
 		m_MenuTimer = Time.time;
+		m_CurrentLevelName = Application.loadedLevelName;
 	}
 	
 	// Update is called once per frame
@@ -82,7 +84,7 @@ public class PauseMenu : MonoBehaviour {
 		if(m_MenuPosID == 0){
 			m_GameManager.m_CurrentState = PauseGame(m_GameManager.m_CurrentState);
 		}else if(m_MenuPosID == 1){
-			Application.LoadLevel("MainGame");
+			Application.LoadLevel(m_CurrentLevelName);
 		}else{
 			Application.LoadLevel("MainMenu");
 		}

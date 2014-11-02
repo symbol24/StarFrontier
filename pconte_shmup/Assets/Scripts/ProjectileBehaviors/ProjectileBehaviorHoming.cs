@@ -8,7 +8,7 @@ public class ProjectileBehaviorHoming : ProjectileBehavior {
 
 	// Use this for initialization
 	public override void Start () {
-		m_Type = "missile";
+		m_Controller.m_Type = "missile";
 		Object[] allEAI = GameObject.FindObjectsOfType (typeof(EnemyController));
 		foreach (EnemyController ec in allEAI) {
 			if(ec != null){

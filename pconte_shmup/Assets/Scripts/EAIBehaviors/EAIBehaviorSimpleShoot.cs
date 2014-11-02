@@ -1,25 +1,29 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EAIBehaviorSimpleShoot : EAIBehaviors {
-	public float minFireRate = 1.0f;
-	public float maxFireRate = 2.0f;
-	public float nextFire = 0.0F;
-	public ProjectileController tempBullet;
-	public float offset;
+	public float m_MinFireRate = 1.0f;
+	public float m_MaxFireRate = 2.0f;
+	public float m_NextFire = 0.0F;
+	private ProjectileController m_BulletToShoot;
+	private ProjectileController tempBullet;
+	public float m_Offset;
 
 	// Use this for initialization
 	public override void Start(){		
 		base.Start ();
-		nextFire = Time.time + minFireRate;
+		m_NextFire = Time.time + m_MinFireRate;
+		m_BulletToShoot = m_Controller.m_ProjectileToShoot;
 	}
 
 	// Update is called once per frame
 	public override void UpdateBehavior() {
-		if (Time.time > nextFire){
-			nextFire = Time.time + Random.Range(minFireRate, maxFireRate);
-			tempBullet = m_Controller.gameMgr.m_BulletsEAI.Pop();
-			tempBullet.transform.position = new Vector2(m_Controller.transform.position.x, m_Controller.transform.position.y - offset);
+		if (Time.time > m_NextFire){
+			m_NextFire = Time.time + Random.Range(m_MinFireRate, m_MaxFireRate);
+			Stack<ProjectileController> StackToUpdate = EntitiesCreator.GetStackToUpdate(m_BulletToShoot, m_Controller.gameMgr);
+			tempBullet = StackToUpdate.Pop();
+			tempBullet.transform.position = new Vector2(m_Controller.transform.position.x, m_Controller.transform.position.y - m_Offset);
 			tempBullet.gameObject.SetActive(true);
 		}
 	}

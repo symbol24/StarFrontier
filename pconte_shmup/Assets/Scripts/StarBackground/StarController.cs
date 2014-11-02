@@ -27,7 +27,7 @@ public class StarController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(Application.loadedLevelName == "MainGame"){
+		if(Application.loadedLevelName == "MainGame" || Application.loadedLevelName == "boss_prototype"){
 			gameMgr = GameObject.Find ("GameManagerObj").GetComponent<GameManager> ();
 		}else if(Application.loadedLevelName == "MainMenu"){
 			mainMenuMgr = GameObject.Find ("MainMenuObj").GetComponent<MainMenuController> ();

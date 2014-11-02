@@ -8,6 +8,7 @@ public class ProjectileController : MonoBehaviour {
 	public float m_Speed = 5.0f;
 	public string m_Target = "enemy";
 	public string m_Owner = "player";
+	public string m_Type = "";
 	public ProjectileBehavior[] m_ProjectileBehaviorPrefabs;
 	public ProjectileBehavior[] m_ProjectileBehaviorInstances;
 

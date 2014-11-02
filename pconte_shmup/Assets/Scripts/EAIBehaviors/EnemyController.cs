@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour {
 	public int scoreValue;
 	public GameObject exBlue;
 	public string target;
+	public ProjectileController m_ProjectileToShoot;
 	public EAIBehaviors[] m_BehaviorsPrefabs;
 	private EAIBehaviors[] m_BehaviorsInstances;
 	public GameObject[] m_CannonReferances;

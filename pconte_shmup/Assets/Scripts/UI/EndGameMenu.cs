@@ -10,12 +10,13 @@ public class EndGameMenu : MonoBehaviour {
 	public Vector3[] m_EndGameMenuLocations;
 	private int m_MenuPosID = 0;
 	private float m_MenuTimer = 0.0f;
+	private string m_CurrentLevelName;
 
 	// Use this for initialization
 	void Start () {
 		m_GameManager = GameObject.Find ("GameManagerObj").GetComponent<GameManager> ();
 		m_MenuTimer = Time.time;
-	
+		m_CurrentLevelName = Application.loadedLevelName;
 	}
 	
 	// Update is called once per frame
@@ -52,7 +53,7 @@ public class EndGameMenu : MonoBehaviour {
 
 	private void ConfirmEndGameSelect (){
 		if(m_MenuPosID == 0){
-			Application.LoadLevel("MainGame");
+			Application.LoadLevel(m_CurrentLevelName);
 		}else{
 			Application.LoadLevel("MainMenu");
 		}

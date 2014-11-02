@@ -49,6 +49,8 @@
      <Compile Include="Assets\Scripts\CanonScripts\CannonController.cs" />
      <Compile Include="Assets\Scripts\EAIBehaviors\EAIBehaviorEvade.cs" />
      <Compile Include="Assets\Scripts\EAIBehaviors\EAIBehaviorHealthBar.cs" />
+     <Compile Include="Assets\Scripts\EAIBehaviors\EAIBehaviorPatternTest.cs" />
+     <Compile Include="Assets\Scripts\EAIBehaviors\EAIBehaviorShootAllTest.cs" />
      <Compile Include="Assets\Scripts\EAIBehaviors\EAIBehaviorSimpleMove.cs" />
      <Compile Include="Assets\Scripts\EAIBehaviors\EAIBehaviorSimpleShoot.cs" />
      <Compile Include="Assets\Scripts\EAIBehaviors\EAIBehaviorSpreadShotTest.cs" />
