@@ -27,10 +27,11 @@ public class ProjectileController : MonoBehaviour {
 			foreach(ProjectileBehavior behavior in m_ProjectileBehaviorInstances){
 				behavior.UpdateBehavior();
 			}
-
-			//putting the bullets back into their respective STACK
-			if(gameObject.activeInHierarchy && !gameObject.renderer.isVisible){
-				pushBullet(this);
+			if(m_Type != "beam"){
+				//putting the bullets back into their respective STACK
+				if(gameObject.activeInHierarchy && !gameObject.renderer.isVisible){
+					pushBullet(this);
+				}
 			}
 		}
 	}
