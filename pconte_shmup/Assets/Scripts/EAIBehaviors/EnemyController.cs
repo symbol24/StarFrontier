@@ -5,17 +5,20 @@ using System.Collections.Generic;
 public class EnemyController : MonoBehaviour {
 
 	public GameManager gameMgr;
-	public float limiterY;
-	public int eaiHP;
+	public float limiterY = -4.9f;
+	public int eaiHP = 1;
 	public int m_currentHP;
-	public int eaiArmor;
-	public int scoreValue;
+	public int eaiArmor = 0;
+	public int scoreValue = 100;
 	public GameObject exBlue;
-	public string target;
+	public string target = "player";
 	public ProjectileController m_ProjectileToShoot;
+	public float m_ShootDelay = 1.0f;
 	public EAIBehaviors[] m_BehaviorsPrefabs;
 	private EAIBehaviors[] m_BehaviorsInstances;
 	public GameObject[] m_CannonReferances;
+	public float m_MouvementSpeed = 1.0f;
+	public GameObject m_HealthBar;
 
 	void Start(){
 		gameMgr = GameObject.Find ("GameManagerObj").GetComponent<GameManager> ();

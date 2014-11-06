@@ -26,8 +26,8 @@ public class PauseMenu : MonoBehaviour {
 			}
 		}else if(m_GameManager.m_CurrentState == GameManager.gameState.paused){
 		//pause menu controls
-			if(m_GameManager.m_MenuDelayTimer < Time.time && (m_GameManager.m_VertValue > m_GameManager.m_MenuDeadSpot || m_GameManager.m_VertValue < -m_GameManager.m_MenuDeadSpot)){
-				m_GameManager.m_MenuDelayTimer = Time.time + m_MenuTimer;//to add a delay in input to prevent inputs taht are too quick
+			if(m_MenuTimer < Time.time && (m_GameManager.m_VertValue > m_GameManager.m_MenuDeadSpot || m_GameManager.m_VertValue < -m_GameManager.m_MenuDeadSpot)){
+				m_MenuTimer = Time.time + m_GameManager.m_MenuDelayTimer;//to add a delay in input to prevent inputs taht are too quick
 				MovePauseSelector(m_GameManager.m_VertValue);
 			}
 			if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(m_GameManager.m_ConfirmButton)){

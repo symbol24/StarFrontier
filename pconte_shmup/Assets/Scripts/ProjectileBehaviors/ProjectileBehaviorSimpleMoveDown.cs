@@ -6,6 +6,7 @@ public class ProjectileBehaviorSimpleMoveDown : ProjectileBehavior {
 
 	// Use this for initialization
 	public override void Start () {
+		m_BulletSpeed = m_Controller.m_Speed;
 	
 	}
 	

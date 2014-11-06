@@ -8,7 +8,7 @@ public class EAIBehaviorHealthBar : EAIBehaviors {
 	// Use this for initialization
 	public override void Start () {
 		base.Start ();
-		m_HealthBar = GameObject.Find ("boss_heathbar");
+		m_HealthBar = m_Controller.m_HealthBar;
 		m_originalScaleX = m_HealthBar.transform.localScale.x;
 	}
 	
