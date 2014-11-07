@@ -36,15 +36,6 @@ public class EAIBehaviorPatternTest : EAIBehaviors {
 		}
 
 		StartCoroutine ("RotateBack");
-//		for(int i = 0; i < m_Controller.m_CannonReferances.Length; i++){
-//			m_CurrentRotationDifference[i] = m_Controller.m_CannonReferances[i].transform.rotation.z - m_EndRotation;
-//
-//			Vector3 tempV = new Vector3(0,0,0);
-//			float angle = Mathf.Atan2(tempV.y, tempV.x)*Mathf.Rad2Deg;
-//			Quaternion rotQ = new Quaternion ();
-//			rotQ.eulerAngles = new Vector3(0,0,angle-90);
-//			m_Controller.m_CannonReferances[i].transform.rotation = rotQ;
-//		}
 
 	}
 

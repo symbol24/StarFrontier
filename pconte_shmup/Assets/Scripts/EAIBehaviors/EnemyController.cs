@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour {
 	public GameObject exBlue;
 	public string target = "player";
 	public ProjectileController m_ProjectileToShoot;
+	public ProjectileController[] m_ListOfProjectilesToShoot;
 	public float m_ShootDelay = 1.0f;
 	public EAIBehaviors[] m_BehaviorsPrefabs;
 	private EAIBehaviors[] m_BehaviorsInstances;
