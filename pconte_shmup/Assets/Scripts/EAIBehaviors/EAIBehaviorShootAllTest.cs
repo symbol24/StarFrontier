@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -22,7 +22,7 @@ public class EAIBehaviorShootAllTest : EAIBehaviors {
 		if (Time.time > m_NextFire){
 			m_NextFire = Time.time + m_FireRate;
 			foreach(GameObject cRef in m_Controller.m_CannonReferances){
-				Stack<ProjectileController> StackToUpdate = EntitiesCreator.GetStackToUpdate(m_BulletToShoot, m_Controller.gameMgr);
+				Stack<ProjectileController> StackToUpdate = EntitiesCreator.GetStackToUpdate(m_BulletToShoot, m_Controller.m_GameMgr);
 				tempBullet = StackToUpdate.Pop();
 				tempBullet.transform.position = new Vector2(cRef.transform.position.x, cRef.transform.position.y);
 				tempBullet.transform.rotation = cRef.transform.rotation;

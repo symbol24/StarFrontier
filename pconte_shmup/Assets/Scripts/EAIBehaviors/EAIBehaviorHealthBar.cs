@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class EAIBehaviorHealthBar : EAIBehaviors {
@@ -19,8 +19,8 @@ public class EAIBehaviorHealthBar : EAIBehaviors {
 	
 	
 	public override void UpdateBehavior() {
-		float currentHPFloat = m_Controller.m_currentHP;
-		float startingHPFloat = m_Controller.eaiHP;
+		float currentHPFloat = m_Controller.m_CurrentHP;
+		float startingHPFloat = m_Controller.m_EaiHP;
 		float healthPercent = (currentHPFloat / startingHPFloat) * m_originalScaleX;
 		if(m_HealthBar != null){
 			m_HealthBar.transform.localScale = new Vector3(healthPercent, m_HealthBar.transform.localScale.y, m_HealthBar.transform.localScale.z);

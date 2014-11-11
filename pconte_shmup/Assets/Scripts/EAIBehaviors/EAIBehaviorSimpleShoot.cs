@@ -21,7 +21,7 @@ public class EAIBehaviorSimpleShoot : EAIBehaviors {
 	public override void UpdateBehavior() {
 		if (Time.time > m_NextFire){
 			m_NextFire = Time.time + m_FireRate;
-			Stack<ProjectileController> StackToUpdate = EntitiesCreator.GetStackToUpdate(m_BulletToShoot, m_Controller.gameMgr);
+			Stack<ProjectileController> StackToUpdate = EntitiesCreator.GetStackToUpdate(m_BulletToShoot, m_Controller.m_GameMgr);
 			tempBullet = StackToUpdate.Pop();
 			tempBullet.transform.position = new Vector2(m_Controller.transform.position.x, m_Controller.transform.position.y - m_Offset);
 			tempBullet.gameObject.SetActive(true);

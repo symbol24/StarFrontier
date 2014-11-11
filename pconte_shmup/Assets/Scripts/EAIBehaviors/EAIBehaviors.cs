@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EAIBehaviors : MonoBehaviour{
 	protected EnemyController m_Controller;
+	public string m_BehaviorName = "base";
 
 	public void Init (EnemyController controller) {
 		m_Controller = controller;
