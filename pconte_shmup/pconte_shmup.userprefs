@@ -1,10 +1,28 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EAIBehaviors\EAIBehaviorTankMiniBoss.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EAIBehaviors\EAIBehaviorTankBoss.cs">
     <Files>
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorTankMiniBoss.cs" Line="38" Column="8" />
-      <File FileName="Assets\Scripts\CanonScripts\CannonReferences.cs" Line="17" Column="1" />
+      <File FileName="Assets\Scripts\ProjectileBehaviors\ProjectileBehaviorSimpleMoveDown.cs" Line="19" Column="26" />
+      <File FileName="Assets\Scripts\CanonScripts\CannonReferences.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ProjectileBehaviors\ProjectileBehaviorHoming.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorTankBoss.cs" Line="218" Column="11" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Scripts" expanded="True">
+              <Node name="CanonScripts" expanded="True" />
+              <Node name="EAIBehaviors" expanded="True">
+                <Node name="EAIBehaviorTankBoss.cs" selected="True" />
+              </Node>
+              <Node name="ProjectileBehaviors" expanded="True" />
+              <Node name="StarBackground" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -2,8 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class EAIBehaviorTankMiniBoss : EAIBehaviors {
-	private enum MiniBossSate
+public class EAIBehaviorTankBoss : EAIBehaviors {
+
+	//oooh states!
+	private enum BossState
 		{
 		arriving,
 		settle,
@@ -11,15 +13,22 @@ public class EAIBehaviorTankMiniBoss : EAIBehaviors {
 		threequaters,
 		half,
 		onequarter,
-		berserk
+		berserk,
+		dying
 		}
 
-	private MiniBossSate m_CurrentState;
+	private BossState m_CurrentState;
+	private BossState m_PreviousState;
 
 	//three sets of cannons
 	private CannonReferences[] m_CannonList1;
 	private CannonReferences[] m_CannonList2;
 	private CannonReferences[] m_CannonList3;
+
+	//original rotation points of cannons
+	private Transform[] m_CannonTransforms1;
+	private Transform[] m_CannonTransforms2;
+	private Transform[] m_CannonTransforms3;
 
 	//three bullets
 	private ProjectileController[] m_Bullets;
@@ -33,43 +42,54 @@ public class EAIBehaviorTankMiniBoss : EAIBehaviors {
 
 	//settle time to build tension
 	private float m_SettleTime = 2.0f;
+	private float m_SettleSpeed = 2.0f;
 
 	//first wave - only first set of weapons are active
 	public float m_FirstWaveMouvementSpeed = 1.0f;
-	public float m_FirstWaveShotDelay = 0.3f;
+	public float m_FirstWaveShotDelay = 0.1f;
 	public float m_FirstWaveGroupingDelay = 2.0f;
 	public int m_FirstWaveBulletUsedID = 0;
-	public int m_FirstWaveNumberOfGroupedShots = 3;
+	public int m_FirstWaveNumberOfGroupedShots = 5;
 
 	//three wuater health - 2 sets of cannons in use - first wave used for first weapons as well
 	public float m_ThreeQuartersMouvementSpeed = 1.0f;
-	public float m_ThreeQuartersShotDelay = 0.3f;
+	public float m_ThreeQuartersShotDelay = 0.2f;
 	public float m_ThreeQuartersGroupingDelay = 2.0f;
 	public int m_ThreeQuartersUsedID = 1;
-	public int m_ThreeQaurtersNumberOfGroupedShots = 3;
-	public float m_SinSpeed = 1.0f;
-	public float m_SinAmplitude = 1.0f;
-	public float m_SinFrequency = 1.0f;
+	public int m_ThreeQaurtersNumberOfGroupedShots = 4;
+	public float m_ThreeQaurtersSinAmplitude = 1.0f;
+	public float m_ThreeQaurtersSinFrequency = 1.0f;
+
+	//sin mouvement
 	private float m_SinHorizontalOffset = 0.0f;
+	private float m_SinVerticalOffset = 0.0f;
 	private float m_SinTime = 0.0f;
 
 	//half health - third weapon is now active
 	public float m_HalfMouvementSpeed = 1.0f;
 	public float m_HalfShotDelay = 0.3f;
-	public float m_HalfGroupingDelay = 2.0f;
+	public float m_HalfGroupingDelay = 0.5f;
 	public int m_HalfUsedID = 2;
 	public int m_HalfNumberOfGroupedShots = 3;
 
 
 	//one quarter health - all weapons converge for a large single shot all together
 	public float m_OneQuarterMouvementSpeed = 1.0f;
-	public float m_OneQuarterShotDelay = 1.0f;
+	public float m_OneQuarterShotDelay = 0.1f;
+	public float m_OneQuarterGroupingDelay = 0.5f;
 	public int m_OneQuarterUsedID = 2;
-	public int m_OneQuarterNumberOfGroupedShots = 3;
+	public int m_OneQuarterNumberOfGroupedShots = 6;
 
 	//berserk mode 10% health - weapons are now berserk and send bullets everywhere
 	public float m_BerserkMouvementSpeed = 1.0f;
-	public float m_BerserShotDelay = 1.0f;
+	public float m_BerserkShotDelay = 0.1f;
+	public float m_BerserkGroupingDelay = 0.3f;
+	public int m_BerserkUsedID = 1;
+	public int m_BerserkNumberOfGroupedShots = 10;
+	public float m_BerserkSinAmplitude = 1.0f;
+	public float m_BerserkSinFrequency = 1.0f;
+
+	//cannon rotation
 	public float m_StartRotation = 0.0f;
 	public float m_EndRotation = 20.0f;
 	private float[] m_CurrentRotationDifference;
@@ -96,12 +116,16 @@ public class EAIBehaviorTankMiniBoss : EAIBehaviors {
 	public override void Start(){
 		m_polyCollider = m_Controller.GetComponent<PolygonCollider2D> ();
 		if (m_polyCollider == null)	print ("No COLLIDER ERHMAHGERD!");
+		//disable collision
+		else m_polyCollider.enabled = false;
 		
 		//setting the cannons in the proper sets
 		SetupCannons();
 
+		//get bullets
 		m_Bullets = m_Controller.m_ListOfProjectilesToShoot;
-		
+
+		//set timers to nao
 		m_Set1NextShot = Time.time;
 		m_Set1NextGroupingShot = Time.time;
 		m_Set2NextShot = Time.time;
@@ -112,53 +136,120 @@ public class EAIBehaviorTankMiniBoss : EAIBehaviors {
 		//setting at spawn point
 		m_Controller.transform.position = m_StartingPoint;
 
-
-
-		//for berserk waves
+		//for berserk waves TO BE CHANBGED!!!!!!!
 		m_CurrentRotationDifference = new float[m_Controller.m_CannonReferances.Length];
-		//StartCoroutine ("BerserkRotateForth");
 
-		m_CurrentState = MiniBossSate.arriving;
+		//first state to arriving!
+		m_CurrentState = BossState.arriving;
 	}
 	
 	// Update is called once per frame
 	public override void UpdateBehavior() {
 		switch (m_CurrentState) {
-		case MiniBossSate.arriving:
+		case BossState.arriving:
 			m_Controller.transform.Translate(Vector3.down * m_ArrivingSpeed * Time.deltaTime, Space.World);
 			if(m_Controller.transform.position.y <= m_SettlePoint.y) {
 				m_polyCollider.enabled = true;
-				m_CurrentState = MiniBossSate.settle;
+				m_CurrentState = BossState.settle;
+				m_PreviousState = BossState.arriving;
 				m_Timer = Time.time + m_SettleTime;
 			}
 			break;
 
-		case MiniBossSate.settle:
-			if(Time.time >= m_Timer) m_CurrentState = MiniBossSate.firstwave;
+		case BossState.settle:
+			SettleToPosition();
+
+
 			break;
 
-		case MiniBossSate.firstwave:
+		case BossState.firstwave:
 			ShootFromTheseCannons(1, m_CannonList1, m_Bullets[m_FirstWaveBulletUsedID], m_FirstWaveShotDelay, m_FirstWaveGroupingDelay, m_FirstWaveNumberOfGroupedShots);
-			if(m_Controller.m_currentHP <= (m_Controller.eaiHP*0.75)) {
-				m_CurrentState = MiniBossSate.threequaters;
+			if(m_Controller.m_currentHP <= (m_Controller.eaiHP*0.75f)) {
+				m_CurrentState = BossState.settle;
+				m_PreviousState = BossState.firstwave;
+				m_polyCollider.enabled = false;
 			}
 			break;
 
-		case MiniBossSate.threequaters:
+		case BossState.threequaters:
 			ShootFromTheseCannons(1, m_CannonList1, m_Bullets[m_FirstWaveBulletUsedID], m_FirstWaveShotDelay, m_FirstWaveGroupingDelay, m_FirstWaveNumberOfGroupedShots);
 			ShootFromTheseCannons(2, m_CannonList2, m_Bullets[m_ThreeQuartersUsedID], m_ThreeQuartersShotDelay, m_ThreeQuartersGroupingDelay, m_ThreeQaurtersNumberOfGroupedShots);
-			SinWaveMotion();
+			m_SinHorizontalOffset = SinWaveMotion(m_ThreeQaurtersSinFrequency, m_ThreeQaurtersSinAmplitude, m_SinHorizontalOffset, m_Controller.transform.right);
+			if(m_Controller.m_currentHP <= (m_Controller.eaiHP*0.50f)) {
+				m_CurrentState = BossState.settle;
+				m_PreviousState = BossState.threequaters;
+				m_polyCollider.enabled = false;
+				m_SinHorizontalOffset = 0.0f;
+			}
 			break;
 
-		case MiniBossSate.half:
+		case BossState.half:
+			ShootFromTheseCannons(1, m_CannonList1, m_Bullets[m_FirstWaveBulletUsedID], m_FirstWaveShotDelay, m_FirstWaveGroupingDelay, m_FirstWaveNumberOfGroupedShots);
+			ShootFromTheseCannons(2, m_CannonList2, m_Bullets[m_ThreeQuartersUsedID], m_ThreeQuartersShotDelay, m_ThreeQuartersGroupingDelay, m_ThreeQaurtersNumberOfGroupedShots);
+			ShootFromTheseCannons(3, m_CannonList2, m_Bullets[m_HalfUsedID], m_HalfShotDelay, m_HalfGroupingDelay, m_HalfNumberOfGroupedShots);
+			if(m_Controller.m_currentHP <= (m_Controller.eaiHP*0.25f)) {
+				m_CurrentState = BossState.settle;
+				m_PreviousState = BossState.half;
+				m_polyCollider.enabled = false;
+			}
 			break;
 
-		case MiniBossSate.onequarter:
+		case BossState.onequarter:
+			ShootFromTheseCannons(1, m_CannonList1, m_Bullets[m_OneQuarterUsedID], m_OneQuarterShotDelay, m_OneQuarterGroupingDelay, m_OneQuarterNumberOfGroupedShots);
+			ShootFromTheseCannons(2, m_CannonList2, m_Bullets[m_OneQuarterUsedID], m_OneQuarterShotDelay, m_OneQuarterGroupingDelay, m_OneQuarterNumberOfGroupedShots);
+			ShootFromTheseCannons(3, m_CannonList2, m_Bullets[m_OneQuarterUsedID], m_OneQuarterShotDelay, m_OneQuarterGroupingDelay, m_OneQuarterNumberOfGroupedShots);
+			if(m_Controller.m_currentHP <= (m_Controller.eaiHP*0.10f)) {
+				m_CurrentState = BossState.settle;
+				m_PreviousState = BossState.onequarter;
+				m_polyCollider.enabled = false;
+			}
 			break;
 
-		case MiniBossSate.berserk:
+		case BossState.berserk:
+			ShootFromTheseCannons(1, m_CannonList1, m_Bullets[m_BerserkUsedID], m_BerserkShotDelay, m_BerserkGroupingDelay, m_BerserkNumberOfGroupedShots);
+			ShootFromTheseCannons(2, m_CannonList2, m_Bullets[m_BerserkUsedID], m_BerserkShotDelay, m_BerserkGroupingDelay, m_BerserkNumberOfGroupedShots);
+			ShootFromTheseCannons(3, m_CannonList2, m_Bullets[m_BerserkUsedID], m_BerserkShotDelay, m_BerserkGroupingDelay, m_BerserkNumberOfGroupedShots);
+			m_SinHorizontalOffset = SinWaveMotion(m_BerserkSinFrequency, m_BerserkSinAmplitude, m_SinHorizontalOffset, m_Controller.transform.right);
+			m_SinVerticalOffset = SinWaveMotion(m_BerserkSinFrequency, m_BerserkSinAmplitude, m_SinVerticalOffset, m_Controller.transform.up);
 			break;
+		
+		case BossState.dying:
 
+			break; 
+		}
+	}
+
+	private void SettleToPosition (){
+		bool settled = false;
+		Vector3 currentPosition = m_Controller.transform.position;
+		//move to settle point
+		if(Vector3.Distance(currentPosition, m_SettlePoint) > 0.1f){
+			Vector3 directionOfTravel = m_SettlePoint - currentPosition;
+			directionOfTravel.Normalize();
+			m_Controller.transform.Translate((directionOfTravel.x * m_SettleSpeed * Time.deltaTime),
+			                                 (directionOfTravel.y * m_SettleSpeed * Time.deltaTime),
+			                                 (directionOfTravel.z * m_SettleSpeed * Time.deltaTime),
+			                                 Space.World);
+		}else{
+			m_Controller.transform.position = Vector3.MoveTowards(currentPosition, m_SettlePoint, m_SettleSpeed * Time.deltaTime);
+			settled = true;
+		}
+		
+		if(settled && m_PreviousState == BossState.arriving){
+			m_CurrentState = BossState.firstwave;
+			m_polyCollider.enabled = true;
+		}else if(settled && m_PreviousState == BossState.firstwave){
+			m_CurrentState = BossState.threequaters;
+			m_polyCollider.enabled = true;
+		}else if(settled && m_PreviousState == BossState.threequaters){
+			m_CurrentState = BossState.half;
+			m_polyCollider.enabled = true;
+		}else if(settled && m_PreviousState == BossState.half){
+			m_CurrentState = BossState.onequarter;
+			m_polyCollider.enabled = true;
+		}else if(settled && m_PreviousState == BossState.onequarter){
+			m_CurrentState = BossState.berserk;
+			m_polyCollider.enabled = true;
 		}
 	}
 
@@ -183,6 +274,10 @@ public class EAIBehaviorTankMiniBoss : EAIBehaviors {
 		m_CannonList2 = new CannonReferences[set2];
 		m_CannonList3 = new CannonReferences[set3];
 		
+		m_CannonTransforms1 = new Transform[set1];
+		m_CannonTransforms2 = new Transform[set2];
+		m_CannonTransforms3 = new Transform[set3];
+		
 		set1 = 0;
 		set2 = 0;
 		set3 = 0;
@@ -190,12 +285,15 @@ public class EAIBehaviorTankMiniBoss : EAIBehaviors {
 		foreach(CannonReferences cref in cannons){
 			if(cref.m_name == "Set1"){
 				m_CannonList1[set1] = cref;
+				m_CannonTransforms1[set1] = cref.transform;
 				set1++;
 			}else if(cref.m_name == "Set2"){
 				m_CannonList2[set2] = cref;
+				m_CannonTransforms2[set2] = cref.transform;
 				set2++;
 			}else{
 				m_CannonList3[set3] = cref;
+				m_CannonTransforms3[set3] = cref.transform;
 				set3++;
 			}
 		}
@@ -257,16 +355,18 @@ public class EAIBehaviorTankMiniBoss : EAIBehaviors {
 
 	}
 
-	private void SinWaveMotion(){
+	private float SinWaveMotion(float sinFrequency, float sinAmplitude, float offset, Vector3 direction){
 		m_SinTime += Time.deltaTime;
 		
 		//remove offset
-		m_Controller.transform.position -= m_SinHorizontalOffset * m_Controller.transform.right;
+		m_Controller.transform.position -= offset * direction;
 		
 		//adjust horizontally
-		m_SinHorizontalOffset = Mathf.Sin (m_SinTime * m_SinFrequency * 2 * Mathf.PI) * m_SinAmplitude;
+		offset = Mathf.Sin (m_SinTime * sinFrequency * 2 * Mathf.PI) * sinAmplitude;
 		
-		m_Controller.transform.position += m_SinHorizontalOffset * m_Controller.transform.right;
+		m_Controller.transform.position += offset * direction;
+
+		return offset;
 	}
 
 	private IEnumerator BerserkRotateForth(){
