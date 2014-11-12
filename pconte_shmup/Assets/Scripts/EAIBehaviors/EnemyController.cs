@@ -30,10 +30,10 @@ public class EnemyController : MonoBehaviour {
 		for(int i = 0; i < m_BehaviorsPrefabs.Length; i++){
 			m_BehaviorsInstances[i] = Instantiate(m_BehaviorsPrefabs[i], transform.position, transform.rotation) as EAIBehaviors;
 			m_BehaviorsInstances[i].Init(this);
-			print("behavior "+m_BehaviorsInstances[i].m_BehaviorName);
-			if(m_BehaviorsInstances[i].m_BehaviorName == "death") {
-				m_DeathBehavior = m_BehaviorsInstances[i];
-			}
+		}
+
+		foreach (EAIBehaviors behavior in m_BehaviorsInstances) {
+			if(behavior.m_BehaviorName == "death") m_DeathBehavior = behavior;
 		}
 		if(m_DeathBehavior == null) print("THERE IS NO DEATH BEHAVIOR!!!!");
 		m_CurrentHP = m_EaiHP;
@@ -56,7 +56,9 @@ public class EnemyController : MonoBehaviour {
 
 	private void checkHealth(){
 		if (m_CurrentHP <= 0) {
-			DestroyObjectAndBehaviors();
+			//DestroyObjectAndBehaviors();
+			if(m_DeathBehavior.m_BehaviorDeathType == "boss")
+				m_DeathBehavior.StartExplosions(50);
 		}
 	}
 

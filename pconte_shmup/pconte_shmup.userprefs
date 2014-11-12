@@ -1,15 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EAIBehaviors\EAIBehaviorBossDeath.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EAIBehaviors\EAIBehaviorTankBoss.cs">
     <Files>
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorBossDeath.cs" Line="11" Column="17" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorTankBoss.cs" Line="411" Column="1" />
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="99" Column="1" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="164" Column="1" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EnemyController.cs" Line="59" Column="4" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorSimpleDeath.cs" Line="18" Column="1" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorHealthBar.cs" Line="30" Column="1" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviors.cs" Line="27" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorBossDeath.cs" Line="50" Column="44" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorTankBoss.cs" Line="17" Column="8" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="77" Column="18" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="114" Column="42" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EnemyController.cs" Line="44" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorSimpleDeath.cs" Line="10" Column="27" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorHealthBar.cs" Line="6" Column="40" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviors.cs" Line="7" Column="47" />
+      <File FileName="Assets\Scripts\StarBackground\StarController.cs" Line="36" Column="3" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,8 +18,9 @@
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Scripts" expanded="True">
               <Node name="EAIBehaviors" expanded="True">
-                <Node name="EAIBehaviorBossDeath.cs" selected="True" />
+                <Node name="EAIBehaviorTankBoss.cs" selected="True" />
               </Node>
+              <Node name="StarBackground" expanded="True" />
             </Node>
           </Node>
         </State>

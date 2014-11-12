@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EAIBehaviorHealthBar : EAIBehaviors {
 	public GameObject m_HealthBar;
-	private float m_originalScaleX = 40f;
+	private float m_originalScaleX = 0.0f;
 
 	// Use this for initialization
 	public override void Start () {
@@ -22,8 +22,9 @@ public class EAIBehaviorHealthBar : EAIBehaviors {
 		float currentHPFloat = m_Controller.m_CurrentHP;
 		float startingHPFloat = m_Controller.m_EaiHP;
 		float healthPercent = (currentHPFloat / startingHPFloat) * m_originalScaleX;
+		Vector3 newScale = new Vector3 (healthPercent, m_HealthBar.transform.localScale.y, m_HealthBar.transform.localScale.z);
 		if(m_HealthBar != null){
-			m_HealthBar.transform.localScale = new Vector3(healthPercent, m_HealthBar.transform.localScale.y, m_HealthBar.transform.localScale.z);
+			m_HealthBar.transform.localScale = newScale;
 		}
 	}
 }

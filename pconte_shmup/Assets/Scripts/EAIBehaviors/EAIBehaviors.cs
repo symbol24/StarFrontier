@@ -4,8 +4,9 @@ using System.Collections;
 public class EAIBehaviors : MonoBehaviour{
 	protected EnemyController m_Controller;
 	public string m_BehaviorName = "base";
+	public string m_BehaviorDeathType = "simple";
 
-	public void Init (EnemyController controller) {
+	public virtual void Init (EnemyController controller) {
 		m_Controller = controller;
 	}
 
@@ -22,5 +23,5 @@ public class EAIBehaviors : MonoBehaviour{
 
 	}
 	
-
+	public virtual void StartExplosions(int explosionCount){}
 }

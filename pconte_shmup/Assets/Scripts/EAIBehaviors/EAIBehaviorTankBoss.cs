@@ -92,6 +92,10 @@ public class EAIBehaviorTankBoss : EAIBehaviors {
 	public Vector3[] m_BerserkPoints;
 	private int m_BerserkPointsID = 0;
 
+	//dying sinwave
+	private float m_DyingSinAmplitude = 0.1f;
+	private float m_DyingSinFrequency = 10.0f;
+
 	//time management
 	private float m_Set1NextShot = 0.0f;
 	private float m_Set1NextGroupingShot = 0.0f;
@@ -176,6 +180,9 @@ public class EAIBehaviorTankBoss : EAIBehaviors {
 					}else if(m_PreviousState == BossState.onequarter){
 						m_CurrentState = BossState.berserk;
 						m_polyCollider.enabled = true;
+					}else if(m_PreviousState == BossState.berserk){
+						m_CurrentState = BossState.dying;
+						m_polyCollider.enabled = false;
 					}
 					m_SettleDelaySet = false;
 				}
@@ -247,11 +254,15 @@ public class EAIBehaviorTankBoss : EAIBehaviors {
 
 			if(reached) m_BerserkPointsID++;
 			if(reached && m_BerserkPointsID > 3) m_BerserkPointsID = 0;
-
+			if(m_Controller.m_CurrentHP <= (m_Controller.m_EaiHP*0.01f)) {
+				m_CurrentState = BossState.dying;
+				m_PreviousState = BossState.berserk;
+				m_polyCollider.enabled = false;
+			}
 			break;
 		
 		case BossState.dying:
-
+			m_SinHorizontalOffset = SinWaveMotion(m_DyingSinFrequency, m_DyingSinAmplitude, m_SinHorizontalOffset, m_Controller.transform.right);
 			break; 
 		}
 	}
@@ -391,20 +402,5 @@ public class EAIBehaviorTankBoss : EAIBehaviors {
 		return offset;
 	}
 
-	private IEnumerator DeathExplosions(int amountOfExplosions){
-		Transform shipTransform = m_Controller.transform;
-		GameObject explosion = m_Controller.m_BlueExplosion;
-		float explosionAnimationTime = explosion.animation.clip.length;
-		Vector3 mins = m_Controller.renderer.bounds.min;
-		Vector3 maxs = m_Controller.renderer.bounds.max;
-		for(int i = 0; i < amountOfExplosions; i++){
-			float xOffset = (Random.Range(mins.x, maxs.x));
-			float yOffset = (Random.Range(mins.y, maxs.y));
-			Vector3 newPos = shipTransform.transform.position + new Vector3(xOffset, yOffset, 0);			               
-			explosion = Instantiate (explosion, newPos, shipTransform.transform.rotation) as GameObject;
-			Destroy(explosion, explosionAnimationTime);
-			yield return new WaitForSeconds(explosionAnimationTime);
-		}
-		yield return null;
-	}
+
 }
