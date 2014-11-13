@@ -83,6 +83,10 @@ public class EnemyController : MonoBehaviour {
 					if(evader != null){
 						evader.EvaderHit();
 					}
+					EAIBehaviorTeleporter teleporter = behavior.GetComponentInChildren<EAIBehaviorTeleporter>();
+					if(teleporter != null){
+						teleporter.TeleporterHit();
+					}
 				}
 			}
 			Instantiate (m_BlueExplosion, tempBullet.transform.position, tempBullet.transform.rotation);
