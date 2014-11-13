@@ -109,6 +109,7 @@ public class EAIBehaviorTankBoss : EAIBehaviors {
 
 	//stuff!
 	private PolygonCollider2D m_polyCollider;
+	private GameObject m_YellowBallDarkener;
 
 
 	// Use this for initialization
@@ -117,7 +118,11 @@ public class EAIBehaviorTankBoss : EAIBehaviors {
 		if (m_polyCollider == null)	print ("No COLLIDER ERHMAHGERD!");
 		//disable collision
 		else m_polyCollider.enabled = false;
-		
+	
+		m_YellowBallDarkener = GameObject.Find ("greyer");
+		if(m_YellowBallDarkener == null) print ("No greyer!!");
+		else m_YellowBallDarkener.SetActive(false);
+
 		//setting the cannons in the proper sets
 		SetupCannons();
 
@@ -146,6 +151,7 @@ public class EAIBehaviorTankBoss : EAIBehaviors {
 
 		switch (m_CurrentState) {
 		case BossState.arriving:
+			m_YellowBallDarkener.SetActive(true);
 			m_Controller.transform.Translate(Vector3.down * m_ArrivingSpeed * Time.deltaTime, Space.World);
 			if(m_Controller.transform.position.y <= m_SettlePoint.y) {
 				m_polyCollider.enabled = false;
@@ -155,7 +161,7 @@ public class EAIBehaviorTankBoss : EAIBehaviors {
 			break;
 
 		case BossState.settle:
-			
+			m_YellowBallDarkener.SetActive(true);
 			bool settled = MoveToPoint(m_SettlePoint, m_SettleSpeed);
 
 			if(settled && !m_SettleDelaySet){
@@ -185,6 +191,7 @@ public class EAIBehaviorTankBoss : EAIBehaviors {
 						m_polyCollider.enabled = false;
 					}
 					m_SettleDelaySet = false;
+					m_YellowBallDarkener.SetActive(false);
 				}
 			}
 

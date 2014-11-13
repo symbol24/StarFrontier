@@ -11,16 +11,20 @@ public class CannonController : MonoBehaviour {
 	private Stack<ProjectileController> m_StackToUse;
 	private ProjectileController m_BeamInstance;
 	private bool m_FiringBeam = false;
+	public int m_ProjectileEnergyValue = 1;
+	private EnergySystemController m_EnergyBar;
 
 	void Start(){
-		m_GameManager = GameObject.Find ("GameManagerObj").GetComponent<GameManager> ();
+		m_GameManager = GameObject.FindObjectOfType(typeof(GameManager)) as GameManager;
 		m_StackToUse = EntitiesCreator.GetStackToUpdate(m_ProjectileToShootPrefab, m_GameManager);
+		m_ProjectileEnergyValue = m_ProjectileToShootPrefab.m_EnergyValue;
+		m_EnergyBar = GameObject.FindObjectOfType(typeof(EnergySystemController)) as EnergySystemController;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if(m_GameManager.m_CurrentState == GameManager.gameState.playing){
-			if ((Input.GetKey(KeyCode.Space) || Input.GetKey(m_GameManager.m_ShootButton))){
+			if (((Input.GetKey(KeyCode.Space) || Input.GetKey(m_GameManager.m_ShootButton))) && m_EnergyBar.GetCurrentEnergy() >= m_ProjectileEnergyValue){
 				if(!m_GameManager.m_isShooting){
 					m_GameManager.SwitchShieldStatus(true);
 				}
@@ -55,5 +59,6 @@ public class CannonController : MonoBehaviour {
 		tempBullet.transform.position = new Vector2(refereance.transform.position.x, refereance.transform.position.y);
 		tempBullet.transform.rotation = refereance.transform.rotation;
 		tempBullet.gameObject.SetActive(true);
+		m_EnergyBar.ChangeEnergyTotal ("substract", m_ProjectileEnergyValue);
 	}
 }

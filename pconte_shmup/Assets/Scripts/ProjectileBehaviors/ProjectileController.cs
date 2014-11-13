@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class ProjectileController : MonoBehaviour {
 	private GameManager m_GameManager;
 	public int m_DamageValue = 2;
+	public int m_EnergyValue = 1;
 	public float m_Speed = 5.0f;
 	public string m_Target = "enemy";
 	public string m_Owner = "player";

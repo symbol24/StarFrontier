@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour {
 	public KeyCode m_PauseButton;
 	public KeyCode m_ConfirmButton;
 	public KeyCode m_ShootButton;
+	public KeyCode[] m_CannonSelectionButtons;
 	public float m_VertValue;
 	public float m_HorValue;
 	public float m_MenuDelayTimer = 0.0f;
@@ -85,7 +86,7 @@ public class GameManager : MonoBehaviour {
 	//reduce the amount of lives, remove a visible life icon and trigger endgame
 	public void DecreaseLives(){
 		m_NumberOfLives -= 1;
-		m_LifeIconsDisplayed[m_NumberOfLives].SetActive(false);
+		//m_LifeIconsDisplayed[m_NumberOfLives].SetActive(false);
 		if(m_NumberOfLives <= 0){
 			SetGameOver(m_LoseMessage);
 		}
@@ -141,7 +142,7 @@ public class GameManager : MonoBehaviour {
 		m_CurrentState = gameState.dead;
 		Transform transformForExplosion = m_PlayerShip.transform;
 		m_PlayerShip.renderer.enabled = false;
-		m_PlayerShip.inUseCannon.SetActive (false);
+		m_PlayerShip.currentCannon.SetActive (false);
 		GameObject explosion;
 		for(int i = 0; i < numberOfExplosions; i++){
 			float xOffset = (Random.Range(-explosionOffset, explosionOffset));
@@ -155,7 +156,7 @@ public class GameManager : MonoBehaviour {
 		if(m_NumberOfLives > 0){
 			m_PlayerShip.RepositionShip();
 			m_PlayerShip.renderer.enabled = true;
-			m_PlayerShip.inUseCannon.SetActive (true);
+			m_PlayerShip.currentCannon.SetActive (true);
 			m_CurrentState = gameState.playing;
 		}
 	}
