@@ -21,6 +21,7 @@ public class EnemyController : MonoBehaviour {
 	public GameObject[] m_CannonReferances;
 	public float m_MouvementSpeed = 1.0f;
 	public GameObject m_HealthBar;
+	public int m_CannonUpgradeID = 1;
 
 	void Start(){
 		m_GameMgr = GameObject.Find ("GameManagerObj").GetComponent<GameManager> ();

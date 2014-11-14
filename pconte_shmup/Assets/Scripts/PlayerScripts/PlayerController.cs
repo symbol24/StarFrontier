@@ -22,9 +22,9 @@ public class PlayerController : MonoBehaviour {
 
 	//the cannons!
 	public GameObject cannonPoint;
-	public GameObject[] cannons;
-	public GameObject[] instanciatedCannons;
-	public GameObject currentCannon;
+	public CannonController[] cannons;
+	public CannonController[] instanciatedCannons;
+	public CannonController currentCannon;
 	public int cannonID;
 	public float cannonSelectionDelay = 0.2f;
 	private float cannonSelectionTimer = 0.0f;
@@ -42,12 +42,17 @@ public class PlayerController : MonoBehaviour {
 		m_GameManager = GameObject.Find ("GameManagerObj").GetComponent<GameManager> ();
 
 		//instantiating the first cannon
-		instanciatedCannons = new GameObject[cannons.Length];
+		instanciatedCannons = new CannonController[cannons.Length];
 		for (int i = 0; i < cannons.Length; i++) {
-			instanciatedCannons[i] = Instantiate (cannons[i], cannonPoint.transform.position, cannonPoint.transform.rotation) as GameObject;
+			instanciatedCannons[i] = Instantiate (cannons[i], cannonPoint.transform.position, cannonPoint.transform.rotation) as CannonController;
 			instanciatedCannons[i].transform.parent = transform;
-			if(i == cannonID) currentCannon = instanciatedCannons[i];
-			else instanciatedCannons[i].SetActive(false);
+			if(i == cannonID) {
+				currentCannon = instanciatedCannons[i];
+				currentCannon.m_IsAvailable = true;
+			}else {
+				instanciatedCannons[i].gameObject.SetActive(false);
+				instanciatedCannons[i].m_IsAvailable = false;
+			}
 		}
 		currentHP = playerHP;
 	}
@@ -122,12 +127,32 @@ public class PlayerController : MonoBehaviour {
 
 	private void ChangeSelectedCannon(int direction){
 		int previousID = cannonID;
-		if(direction == 0 && cannonID > 0) cannonID--;
-		else if(direction == 1 && cannonID < instanciatedCannons.Length-1) cannonID++;
-		if (cannonID != previousID) {
-			currentCannon.SetActive(false);
-			currentCannon = instanciatedCannons[cannonID];
-			currentCannon.SetActive(true);
+		bool foundCannon = false;
+		if (direction == 0 && cannonID > 0) {
+			while(!foundCannon && cannonID > 0){
+				cannonID--;
+				if(instanciatedCannons[cannonID].m_IsAvailable) foundCannon = true;
+			}
+			if(!foundCannon) cannonID = previousID;
+		}else if(direction == 1 && cannonID < instanciatedCannons.Length-1){
+			while(!foundCannon && cannonID < (instanciatedCannons.Length-1)){
+				cannonID++;
+				if(instanciatedCannons[cannonID].m_IsAvailable) foundCannon = true;
+			}
+			if(!foundCannon) cannonID = previousID;
 		}
+		if (cannonID != previousID) {
+			currentCannon.gameObject.SetActive(false);
+			currentCannon = instanciatedCannons[cannonID];
+			currentCannon.gameObject.SetActive(true);
+		}
+	}
+
+	public void ActivateCannon(int newCannonID){
+		instanciatedCannons [newCannonID].m_IsAvailable = true;
+		cannonID = newCannonID;
+		currentCannon.gameObject.SetActive(false);
+		currentCannon = instanciatedCannons[cannonID];
+		currentCannon.gameObject.SetActive(true);
 	}
 }

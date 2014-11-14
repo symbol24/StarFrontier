@@ -52,6 +52,9 @@ public class GameManager : MonoBehaviour {
 	//for firing status and shield management
 	public bool m_isShooting = false;
 
+	//for the powerups!
+	public PowerUpController m_PowerUpPrefab;
+
 	
 	void Start(){
 		//creating bullets into stacks
@@ -142,7 +145,7 @@ public class GameManager : MonoBehaviour {
 		m_CurrentState = gameState.dead;
 		Transform transformForExplosion = m_PlayerShip.transform;
 		m_PlayerShip.renderer.enabled = false;
-		m_PlayerShip.currentCannon.SetActive (false);
+		m_PlayerShip.currentCannon.gameObject.SetActive (false);
 		GameObject explosion;
 		for(int i = 0; i < numberOfExplosions; i++){
 			float xOffset = (Random.Range(-explosionOffset, explosionOffset));
@@ -156,7 +159,7 @@ public class GameManager : MonoBehaviour {
 		if(m_NumberOfLives > 0){
 			m_PlayerShip.RepositionShip();
 			m_PlayerShip.renderer.enabled = true;
-			m_PlayerShip.currentCannon.SetActive (true);
+			m_PlayerShip.currentCannon.gameObject.SetActive (true);
 			m_CurrentState = gameState.playing;
 		}
 	}

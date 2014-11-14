@@ -13,6 +13,7 @@ public class CannonController : MonoBehaviour {
 	private bool m_FiringBeam = false;
 	public int m_ProjectileEnergyValue = 1;
 	private EnergySystemController m_EnergyBar;
+	public bool m_IsAvailable = false;
 
 	void Start(){
 		m_GameManager = GameObject.FindObjectOfType(typeof(GameManager)) as GameManager;

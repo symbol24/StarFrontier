@@ -55,6 +55,8 @@ public class EAIBehaviorBossDeath : EAIBehaviors {
 			Destroy(newExplosion, explosionAnimationTime);
 			yield return new WaitForSeconds(delayForNextExplosion);
 		}
+		PowerUpController powerUp = Instantiate (m_Controller.m_GameMgr.m_PowerUpPrefab, m_Controller.transform.position, m_Controller.transform.rotation) as PowerUpController;
+		powerUp.m_UnlockCannonID = m_Controller.m_CannonUpgradeID;
 		m_Controller.DestroyObjectAndBehaviors();
 		yield return null;
 	}

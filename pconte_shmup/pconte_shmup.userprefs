@@ -1,27 +1,22 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EAIBehaviors\EAIBehaviorTeleporter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EAIBehaviors\EAIBehaviorBossDeath.cs">
     <Files>
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorTeleporter.cs" Line="38" Column="38" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorEvade.cs" Line="51" Column="15" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorTankBoss.cs" Line="272" Column="137" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorSimpleShoot.cs" Line="2" Column="26" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EnemyController.cs" Line="73" Column="24" />
-      <File FileName="Assets\Scripts\UI\ButtonController.cs" Line="9" Column="25" />
+      <File FileName="Assets\Scripts\PlayerScripts\PlayerController.cs" Line="154" Column="45" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EnemyController.cs" Line="24" Column="35" />
+      <File FileName="Assets\Scripts\PowerUpController.cs" Line="25" Column="24" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorBossDeath.cs" Line="64" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="56" Column="43" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Scripts" expanded="True">
-              <Node name="CanonScripts" expanded="True" />
               <Node name="EAIBehaviors" expanded="True">
-                <Node name="EAIBehaviorTeleporter.cs" selected="True" />
+                <Node name="EAIBehaviorBossDeath.cs" selected="True" />
               </Node>
               <Node name="PlayerScripts" expanded="True" />
-              <Node name="ProjectileBehaviors" expanded="True" />
-              <Node name="StarBackground" expanded="True" />
-              <Node name="UI" expanded="True" />
             </Node>
           </Node>
         </State>
