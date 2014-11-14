@@ -4,13 +4,11 @@ using System.Collections;
 public class EAIBehaviorPatternTest : EAIBehaviors {
 	public float m_StartRotation = 0.0f;
 	public float m_EndRotation = 20.0f;
-	private float[] m_CurrentRotationDifference;
 	public float m_RotationTime = 0.5f;
 	public float m_TimeUntilNextRotation = 0.0f;
 
 	// Use this for initialization
 	public override void Start () {
-		m_CurrentRotationDifference = new float[m_Controller.m_CannonReferances.Length];
 		StartCoroutine ("RotateForth");
 	}
 	

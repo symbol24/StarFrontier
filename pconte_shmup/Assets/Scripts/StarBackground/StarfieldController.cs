@@ -23,13 +23,15 @@ public class StarfieldController : MonoBehaviour {
 	private GameObject[] allStars;
 	public int warpFactor;
 	public bool inWarp = false;
+	private string levelName = "";
 
 	// Use this for initialization
 	void Start () {
-		if(Application.loadedLevelName == "MainGame" || Application.loadedLevelName == "boss_prototype"){
-			gameMgr = GameObject.Find ("GameManagerObj").GetComponent<GameManager> ();
-		}else if(Application.loadedLevelName == "MainMenu"){
+		levelName = Application.loadedLevelName;
+		if(levelName == "MainMenu"){
 			mainMenuMgr = GameObject.Find ("MainMenuObj").GetComponent<MainMenuController> ();
+		}else{
+			gameMgr = GameObject.Find ("GameManagerObj").GetComponent<GameManager> ();
 		}
 
 		starsTop = EntitiesCreator.CreatAStackOfStars (0, starPrefab, starCount, starColors, starSpeed, starScale, maxX, maxY);
@@ -47,8 +49,8 @@ public class StarfieldController : MonoBehaviour {
 			UnWarpStars();
 		}
 
-		if(Application.loadedLevelName == "MainGame" || Application.loadedLevelName == "boss_prototype"){
-			if(gameMgr != null && gameMgr.m_CurrentState == GameManager.gameState.playing){
+		if(levelName == "MainMenu"){
+			if(mainMenuMgr != null && mainMenuMgr.currentState == MainMenuController.gameState.playing){
 				Stack<StarController> tempsStarStack;
 				for(int i = 0; i < nextSpawn.Length; i++){
 					if(Time.time > nextSpawn[i]){
@@ -63,8 +65,8 @@ public class StarfieldController : MonoBehaviour {
 					}
 				}
 			}
-		}else if(Application.loadedLevelName == "MainMenu"){
-			if(mainMenuMgr != null & mainMenuMgr.currentState == MainMenuController.gameState.playing){
+		}else{
+			if(gameMgr != null && gameMgr.m_CurrentState == GameManager.gameState.playing){
 				Stack<StarController> tempsStarStack;
 				for(int i = 0; i < nextSpawn.Length; i++){
 					if(Time.time > nextSpawn[i]){

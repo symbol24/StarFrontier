@@ -15,6 +15,7 @@ public class StarController : MonoBehaviour {
 	private float origSpeed;
 	public int warpFactor = 1;
 	public bool isInWarp = false;
+	private string levelName = "";
 
 	//simple way to set default values without a constroctor
 	public void createStar(int zId, float zSpeed, Color zColor, Vector2 zScale){
@@ -27,10 +28,11 @@ public class StarController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(Application.loadedLevelName == "MainGame" || Application.loadedLevelName == "boss_prototype"){
-			gameMgr = GameObject.Find ("GameManagerObj").GetComponent<GameManager> ();
-		}else if(Application.loadedLevelName == "MainMenu"){
+		levelName = Application.loadedLevelName;
+		if(levelName == "MainMenu"){
 			mainMenuMgr = GameObject.Find ("MainMenuObj").GetComponent<MainMenuController> ();
+		}else{
+			gameMgr = GameObject.Find ("GameManagerObj").GetComponent<GameManager> ();
 		}
 		starfield = GameObject.Find ("Starfield").GetComponent<StarfieldController> ();
 		mySprite = gameObject.GetComponent<SpriteRenderer>();
@@ -51,9 +53,9 @@ public class StarController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if((Application.loadedLevelName == "MainGame" || Application.loadedLevelName == "boss_prototype" ) && gameMgr != null && gameMgr.m_CurrentState == GameManager.gameState.playing){
+		if((levelName != "MainMenu" || Application.loadedLevelName == "boss_prototype" ) && gameMgr != null && gameMgr.m_CurrentState == GameManager.gameState.playing){
 			MoveStar();
-		}else if(Application.loadedLevelName == "MainMenu" && mainMenuMgr != null & mainMenuMgr.currentState == MainMenuController.gameState.playing){
+		}else if(levelName == "MainMenu" && mainMenuMgr != null & mainMenuMgr.currentState == MainMenuController.gameState.playing){
 			MoveStar();
 		}
 	}

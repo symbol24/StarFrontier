@@ -4,16 +4,13 @@ using System.Collections;
 public class EnemySpawnController : MonoBehaviour {
 	private GameManager m_GameManager;
 
-	//the enemy ships
-	public EnemyController[] m_Enemies;
-	private int m_EnemySelector = 0;
+	public EnemyController m_EAIPrefab;
+	public int m_AmountToSpawn = 1;
 	private int m_EnemyCounter = 0;
-	public int[] m_EnemnySpawnRange;
-	public float m_LimiterY = 4.5f;
-	public float m_LimiterX = 2.5f;
-	public float m_MinSpawnRate = 1.0f;
-	public float m_MaxSpawnRate = 2.0f;
-	private float m_NextSpawn = 0.0F;
+	private float m_SpawnRate = 0.3f;
+	private float m_NextSpawn = 0.0f;
+	private float m_SpawnAtY = 5.0f;
+	private float m_Speed = 0.8f;
 
 
 
@@ -24,22 +21,39 @@ public class EnemySpawnController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(m_GameManager != null && m_GameManager.m_CurrentState == GameManager.gameState.playing){
-			//spawn enemies
-			if (Time.time > m_NextSpawn){
-				m_NextSpawn = Time.time + Random.Range(m_MinSpawnRate, m_MaxSpawnRate);
-				float tempX = Random.Range(-m_LimiterX, m_LimiterX);
-				EnemyController eaiClone;
-				eaiClone = Instantiate(m_Enemies[m_EnemySelector], new Vector2(tempX, transform.position.y + m_LimiterY), transform.rotation) as EnemyController;
-				m_EnemyCounter++;
-				
-				//addind a tank into the mix from time to time
-				if(m_EnemySelector != 1 && m_EnemyCounter >= Random.Range(m_EnemnySpawnRange[0], m_EnemnySpawnRange[1])){
-					m_EnemySelector = 1;
-				}else{
-					m_EnemySelector = 0;
-				}
+		switch(m_GameManager.m_CurrentState){
+			case GameManager.gameState.playing:
+
+			switch (m_GameManager.m_SpawnerState){
+					case GameManager.SpawnerState.moving:
+						if(transform.position.y <= m_SpawnAtY)
+							m_GameManager.m_SpawnerState = GameManager.SpawnerState.spawning;
+						else transform.Translate (Vector3.down * m_Speed * Time.deltaTime, Space.World);
+					break;
+
+					case GameManager.SpawnerState.spawning:
+						if(m_GameManager != null && m_GameManager.m_CurrentState == GameManager.gameState.playing){
+							//spawn enemies
+							if (Time.time > m_NextSpawn && m_EnemyCounter <= m_AmountToSpawn ){
+								m_NextSpawn = Time.time + m_SpawnRate;
+								EnemyController eaiClone = Instantiate(m_EAIPrefab, transform.position, transform.rotation) as EnemyController;
+								eaiClone.gameObject.SetActive(true);
+								m_EnemyCounter++;
+							}
+							if(m_EnemyCounter == m_AmountToSpawn)
+								m_GameManager.m_SpawnerState = GameManager.SpawnerState.dying;
+						}
+					break;
+
+					case GameManager.SpawnerState.immobile:
+						//do nothing!
+					break;
+
+					case GameManager.SpawnerState.dying:
+						Destroy(gameObject);
+					break;
+					}
+			break;
 			}
-		}
 	}
 }

@@ -57,9 +57,10 @@ public class EnemyController : MonoBehaviour {
 
 	private void checkHealth(){
 		if (m_CurrentHP <= 0) {
-			//DestroyObjectAndBehaviors();
-			if(m_DeathBehavior.m_BehaviorDeathType == "boss")
+			if(m_DeathBehavior != null && m_DeathBehavior.m_BehaviorDeathType == "boss")
 				m_DeathBehavior.StartExplosions(50);
+			else
+				DestroyObjectAndBehaviors();
 		}
 	}
 

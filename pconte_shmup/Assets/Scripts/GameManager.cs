@@ -16,6 +16,13 @@ public class GameManager : MonoBehaviour {
 		playing, paused, gameover,dead
 	}
 	public gameState m_CurrentState;
+	public enum SpawnerState{
+		moving,
+		spawning,
+		immobile,
+		dying
+		}
+	public SpawnerState m_SpawnerState;
 	
 	//life icons top left of screen
 	public int m_NumberOfLives;
@@ -72,6 +79,7 @@ public class GameManager : MonoBehaviour {
 
 		//setting the game state to playing
 		m_CurrentState = gameState.playing;
+		m_SpawnerState = SpawnerState.moving;
 
 		//for some reason at work, i had to force the time scale to have the game play once the start is passed
 		Time.timeScale = 1.0f;

@@ -1,12 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EAIBehaviors\EAIBehaviorBossDeath.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EAIBehaviors\EnemyController.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerScripts\PlayerController.cs" Line="154" Column="45" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EnemyController.cs" Line="24" Column="35" />
-      <File FileName="Assets\Scripts\PowerUpController.cs" Line="25" Column="24" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorBossDeath.cs" Line="64" Column="1" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="56" Column="43" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="82" Column="40" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EnemySpawnController.cs" Line="43" Column="8" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EnemyController.cs" Line="59" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,9 +12,10 @@
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Scripts" expanded="True">
               <Node name="EAIBehaviors" expanded="True">
-                <Node name="EAIBehaviorBossDeath.cs" selected="True" />
+                <Node name="EnemyController.cs" selected="True" />
               </Node>
               <Node name="PlayerScripts" expanded="True" />
+              <Node name="StarBackground" expanded="True" />
             </Node>
           </Node>
         </State>
