@@ -116,7 +116,7 @@ public class EAIBehaviorTeleporter : EAIBehaviors {
 				m_NormalShotTimer = Time.time + m_NormalShotDelay;
 			}
 
-			if(m_Controller.m_CurrentHP <= (m_Controller.m_EaiHP*0.01f)) {
+			if(m_Controller.m_CurrentHP <= 0) {
 				m_CurrentState = BossState.dying;
 				m_polyCollider.enabled = false;
 			}

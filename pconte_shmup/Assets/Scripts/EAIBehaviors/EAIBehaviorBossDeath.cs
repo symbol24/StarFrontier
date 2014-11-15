@@ -57,7 +57,13 @@ public class EAIBehaviorBossDeath : EAIBehaviors {
 		}
 		PowerUpController powerUp = Instantiate (m_Controller.m_GameMgr.m_PowerUpPrefab, m_Controller.transform.position, m_Controller.transform.rotation) as PowerUpController;
 		powerUp.m_UnlockCannonID = m_Controller.m_CannonUpgradeID;
-		m_Controller.DestroyObjectAndBehaviors();
+		EnemySpawnController[] allSpawnControllers = GameObject.FindObjectsOfType(typeof(EnemySpawnController)) as EnemySpawnController[];
+		foreach (EnemySpawnController thisSpwnController in allSpawnControllers) {
+			if(thisSpwnController != null){
+				thisSpwnController.RestartState();
+			}
+		}
+		m_Controller.DestroyObjectAndBehaviors(m_Controller.m_ScoreValue);
 		yield return null;
 	}
 }

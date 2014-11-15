@@ -35,7 +35,7 @@ public class ButtonController : MonoBehaviour {
 	private void ConfirmSelect(){
 		switch(posID){
 		case 0:
-			Application.LoadLevel("MainGame");
+			Application.LoadLevel("level1");
 			break;
 		case 1:
 			Application.Quit();

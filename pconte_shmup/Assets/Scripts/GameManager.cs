@@ -13,16 +13,10 @@ public class GameManager : MonoBehaviour {
 
 	//game state enum
 	public enum gameState{
-		playing, paused, gameover,dead
+		playing, paused, gameover, dead
 	}
 	public gameState m_CurrentState;
-	public enum SpawnerState{
-		moving,
-		spawning,
-		immobile,
-		dying
-		}
-	public SpawnerState m_SpawnerState;
+
 	
 	//life icons top left of screen
 	public int m_NumberOfLives;
@@ -62,6 +56,9 @@ public class GameManager : MonoBehaviour {
 	//for the powerups!
 	public PowerUpController m_PowerUpPrefab;
 
+	//next level!
+	public string m_NextLevel = "level1";
+
 	
 	void Start(){
 		//creating bullets into stacks
@@ -79,7 +76,6 @@ public class GameManager : MonoBehaviour {
 
 		//setting the game state to playing
 		m_CurrentState = gameState.playing;
-		m_SpawnerState = SpawnerState.moving;
 
 		//for some reason at work, i had to force the time scale to have the game play once the start is passed
 		Time.timeScale = 1.0f;
@@ -117,9 +113,6 @@ public class GameManager : MonoBehaviour {
 		m_TotalKills++;
 		m_TotalScore += score;
 		m_ScoreGUI.text = m_TotalScore.ToString ();
-		if(m_TotalScore >= m_TargetScore){
-			SetGameOver (m_VictoryMessage);
-		}
 	}
 
 	//endgame process
@@ -147,6 +140,10 @@ public class GameManager : MonoBehaviour {
 				playerShipCollider.enabled = false;
 			}
 		}
+	}
+
+	public void ChangeLevel(){
+		Application.LoadLevel(m_NextLevel);
 	}
 
 	public IEnumerator DeathExplosion(int currentHP){

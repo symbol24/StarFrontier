@@ -12,16 +12,11 @@ public class EAIBehaviors : MonoBehaviour{
 
 	public virtual void Start(){
 		transform.position = m_Controller.transform.position;
-
 	}
 
-	public virtual void Update(){
+	public virtual void Update(){}
 
-	}
-
-	public virtual void UpdateBehavior(){
-
-	}
+	public virtual void UpdateBehavior(){}
 	
 	public virtual void StartExplosions(int explosionCount){}
 }

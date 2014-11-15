@@ -261,7 +261,7 @@ public class EAIBehaviorTankBoss : EAIBehaviors {
 
 			if(reached) m_BerserkPointsID++;
 			if(reached && m_BerserkPointsID > 3) m_BerserkPointsID = 0;
-			if(m_Controller.m_CurrentHP <= (m_Controller.m_EaiHP*0.01f)) {
+			if(m_Controller.m_CurrentHP <= 0) {
 				m_CurrentState = BossState.dying;
 				m_PreviousState = BossState.berserk;
 				m_polyCollider.enabled = false;

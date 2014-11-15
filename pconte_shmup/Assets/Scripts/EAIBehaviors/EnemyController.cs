@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour {
 	public float m_MouvementSpeed = 1.0f;
 	public GameObject m_HealthBar;
 	public int m_CannonUpgradeID = 1;
+	public bool m_IsDying = false;
 
 	void Start(){
 		m_GameMgr = GameObject.Find ("GameManagerObj").GetComponent<GameManager> ();
@@ -36,7 +37,7 @@ public class EnemyController : MonoBehaviour {
 		foreach (EAIBehaviors behavior in m_BehaviorsInstances) {
 			if(behavior.m_BehaviorName == "death") m_DeathBehavior = behavior;
 		}
-		if(m_DeathBehavior == null) print("THERE IS NO DEATH BEHAVIOR!!!!");
+		//if(m_DeathBehavior == null) print("THERE IS NO DEATH BEHAVIOR!!!!");
 		m_CurrentHP = m_EaiHP;
 	}
 	
@@ -50,23 +51,24 @@ public class EnemyController : MonoBehaviour {
 			}
 
 			if(transform.position.y < m_LimiterY){
-				DestroyObjectAndBehaviors();
+				DestroyObjectAndBehaviors(0);
 			}
 		}
 	}
 
 	private void checkHealth(){
 		if (m_CurrentHP <= 0) {
+			m_IsDying = true;
 			if(m_DeathBehavior != null && m_DeathBehavior.m_BehaviorDeathType == "boss")
 				m_DeathBehavior.StartExplosions(50);
 			else
-				DestroyObjectAndBehaviors();
+				DestroyObjectAndBehaviors(m_ScoreValue);
 		}
 	}
 
-	public void DestroyObjectAndBehaviors(){
+	public void DestroyObjectAndBehaviors(int score){
 		gameObject.SetActive (false);
-		m_GameMgr.UpdateScore(m_ScoreValue);
+		m_GameMgr.UpdateScore(score);
 		foreach (EAIBehaviors behavior in m_BehaviorsInstances) {
 			if(behavior != null){
 				Destroy(behavior);

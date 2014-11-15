@@ -1,10 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EAIBehaviors\EnemyController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EAIBehaviors\EAIBehaviorEndLevel.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameManager.cs" Line="82" Column="40" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EnemySpawnController.cs" Line="43" Column="8" />
-      <File FileName="Assets\Scripts\EAIBehaviors\EnemyController.cs" Line="59" Column="26" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EnemySpawnController.cs" Line="12" Column="32" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="119" Column="25" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EnemyController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorStopSpawners.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviors.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorBossDeath.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PowerUpController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorFirstBoss.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorTankBoss.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorTeleporter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\ButtonController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorEndLevel.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlanetController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EAIBehaviors\EAIBehaviorEndGame.cs" Line="10" Column="54" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,10 +23,9 @@
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Scripts" expanded="True">
               <Node name="EAIBehaviors" expanded="True">
-                <Node name="EnemyController.cs" selected="True" />
+                <Node name="EAIBehaviorEndLevel.cs" selected="True" />
               </Node>
-              <Node name="PlayerScripts" expanded="True" />
-              <Node name="StarBackground" expanded="True" />
+              <Node name="UI" expanded="True" />
             </Node>
           </Node>
         </State>

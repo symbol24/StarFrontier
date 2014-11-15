@@ -219,7 +219,7 @@ public class EAIBehaviorFirstBoss : EAIBehaviors {
 			ShootFromTheseCannons(2, m_CannonList2, m_Bullets[m_ThreeQuartersUsedID], m_ThreeQuartersShotDelay, m_ThreeQuartersGroupingDelay, m_ThreeQaurtersNumberOfGroupedShots);
 			
 			if(reached) m_HalfPointsID++;
-			if(reached && m_HalfPointsID > 2) m_HalfPointsID = 0;
+			if(reached && m_HalfPointsID > 1) m_HalfPointsID = 0;
 			
 			if(m_Controller.m_CurrentHP <= (m_Controller.m_EaiHP*0.25f)) {
 				m_CurrentState = BossState.settle;
@@ -251,8 +251,8 @@ public class EAIBehaviorFirstBoss : EAIBehaviors {
 			ShootFromTheseCannons(2, m_CannonList2, m_Bullets[m_BerserkUsedID], m_OneQuarterShotDelay, m_OneQuarterGroupingDelay, m_OneQuarterNumberOfGroupedShots);
 			
 			if(reached) m_BerserkPointsID++;
-			if(reached && m_BerserkPointsID > 3) m_BerserkPointsID = 0;
-			if(m_Controller.m_CurrentHP <= (m_Controller.m_EaiHP*0.01f)) {
+			if(reached && m_BerserkPointsID > 1) m_BerserkPointsID = 0;
+			if(m_Controller.m_CurrentHP <= 0) {
 				m_CurrentState = BossState.dying;
 				m_PreviousState = BossState.berserk;
 				m_polyCollider.enabled = false;
