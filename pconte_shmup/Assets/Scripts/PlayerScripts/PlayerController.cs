@@ -76,8 +76,8 @@ public class PlayerController : MonoBehaviour {
 			if(cannonSelectionDirection != -1) ChangeSelectedCannon(cannonSelectionDirection);
 
 			//move
-			velocity.x = m_GameManager.m_HorValue * speed;
-			velocity.y = m_GameManager.m_VertValue * speed;
+			velocity.x = m_GameManager.m_HorValue * speed * Time.deltaTime;
+			velocity.y = m_GameManager.m_VertValue * speed * Time.deltaTime;
 
 			//changing the ship from side to side and idle
 			if (m_GameManager.m_HorValue > 0.0f) {
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour {
 			}
 
 			//move the ship, cannon and shields
-			velocity = Vector2.ClampMagnitude(velocity, speed * Time.deltaTime);
+			//velocity = Vector2.ClampMagnitude(velocity, speed * Time.deltaTime);
 			transform.Translate (velocity, Space.World);
 
 			//clamping to screen size
