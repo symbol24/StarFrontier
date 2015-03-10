@@ -1,0 +1,783 @@
+fileFormatVersion: 2
+guid: 0a1acfb902817ff4bb8dcd633178d338
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 60
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: projectiles_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1105
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1100
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1098
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1096
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1096
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: _missile_sprite_test
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1090
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1096
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1098
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1103
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 1105
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1085
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1043
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1039
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1038
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1041
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1035
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1029
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1035
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1038
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1042
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 1043
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1035
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1024
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 975
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 971
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 969
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 973
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 956
+        width: 13
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 968
+        width: 16
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 974
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 976
+        width: 10
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 981
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 982
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 967
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: _new_bullet_sprite
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 900
+        width: 5
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 907
+        width: 15
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 913
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 915
+        width: 10
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 920
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 921
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 825
+        width: 16
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 825
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 825
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 825
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 839
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 844
+        width: 16
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 847
+        width: 18
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 852
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 853
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 765
+        width: 16
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_61
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 765
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_62
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 765
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_63
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 764
+        width: 20
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_64
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 777
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_65
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 783
+        width: 22
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_66
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 786
+        width: 21
+        height: 38
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_67
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 791
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_68
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 791
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_69
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 704
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_70
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 704
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_71
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 704
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_72
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 703
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_73
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 743
+        width: 54
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_74
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 742
+        width: 54
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_75
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 693
+        width: 53
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_76
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 689
+        width: 54
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_77
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 689
+        width: 55
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_78
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 633
+        width: 107
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_79
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 629
+        width: 108
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_80
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 537
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_81
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 532
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_82
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 532
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_83
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 524
+        width: 107
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_84
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 525
+        width: 108
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_85
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 450
+        width: 107
+        height: 38
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_86
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 449
+        width: 108
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_87
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 355
+        width: 108
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_88
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 350
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_89
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 350
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_90
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 341
+        width: 107
+        height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_91
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 341
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: projectiles_sprite_sheet_92
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 342
+        width: 108
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
