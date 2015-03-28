@@ -1,6 +1,89 @@
 fileFormatVersion: 2
 guid: 0a1acfb902817ff4bb8dcd633178d338
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: projectiles_sprite_sheet_0
+    21300002: projectiles_sprite_sheet_1
+    21300004: projectiles_sprite_sheet_2
+    21300006: projectiles_sprite_sheet_3
+    21300008: projectiles_sprite_sheet_4
+    21300010: _missile_sprite_test
+    21300012: projectiles_sprite_sheet_6
+    21300014: projectiles_sprite_sheet_7
+    21300016: projectiles_sprite_sheet_8
+    21300018: projectiles_sprite_sheet_9
+    21300020: projectiles_sprite_sheet_11
+    21300022: projectiles_sprite_sheet_12
+    21300024: projectiles_sprite_sheet_13
+    21300026: projectiles_sprite_sheet_14
+    21300028: projectiles_sprite_sheet_15
+    21300030: projectiles_sprite_sheet_16
+    21300032: projectiles_sprite_sheet_17
+    21300034: projectiles_sprite_sheet_18
+    21300036: projectiles_sprite_sheet_19
+    21300038: projectiles_sprite_sheet_20
+    21300040: projectiles_sprite_sheet_21
+    21300042: projectiles_sprite_sheet_22
+    21300044: projectiles_sprite_sheet_23
+    21300046: projectiles_sprite_sheet_24
+    21300048: projectiles_sprite_sheet_25
+    21300050: projectiles_sprite_sheet_26
+    21300052: projectiles_sprite_sheet_27
+    21300054: projectiles_sprite_sheet_28
+    21300056: projectiles_sprite_sheet_29
+    21300058: projectiles_sprite_sheet_30
+    21300060: projectiles_sprite_sheet_31
+    21300062: projectiles_sprite_sheet_32
+    21300064: projectiles_sprite_sheet_33
+    21300066: projectiles_sprite_sheet_34
+    21300068: _new_bullet_sprite
+    21300070: projectiles_sprite_sheet_46
+    21300072: projectiles_sprite_sheet_47
+    21300074: projectiles_sprite_sheet_48
+    21300076: projectiles_sprite_sheet_49
+    21300078: projectiles_sprite_sheet_50
+    21300080: projectiles_sprite_sheet_51
+    21300082: projectiles_sprite_sheet_52
+    21300084: projectiles_sprite_sheet_53
+    21300086: projectiles_sprite_sheet_54
+    21300088: projectiles_sprite_sheet_55
+    21300090: projectiles_sprite_sheet_56
+    21300092: projectiles_sprite_sheet_57
+    21300094: projectiles_sprite_sheet_58
+    21300096: projectiles_sprite_sheet_59
+    21300098: projectiles_sprite_sheet_60
+    21300100: projectiles_sprite_sheet_61
+    21300102: projectiles_sprite_sheet_62
+    21300104: projectiles_sprite_sheet_63
+    21300106: projectiles_sprite_sheet_64
+    21300108: projectiles_sprite_sheet_65
+    21300110: projectiles_sprite_sheet_66
+    21300112: projectiles_sprite_sheet_67
+    21300114: projectiles_sprite_sheet_68
+    21300116: projectiles_sprite_sheet_69
+    21300118: projectiles_sprite_sheet_70
+    21300120: projectiles_sprite_sheet_71
+    21300122: projectiles_sprite_sheet_72
+    21300124: projectiles_sprite_sheet_73
+    21300126: projectiles_sprite_sheet_74
+    21300128: projectiles_sprite_sheet_75
+    21300130: projectiles_sprite_sheet_76
+    21300132: projectiles_sprite_sheet_77
+    21300134: projectiles_sprite_sheet_78
+    21300136: projectiles_sprite_sheet_79
+    21300138: projectiles_sprite_sheet_80
+    21300140: projectiles_sprite_sheet_81
+    21300142: projectiles_sprite_sheet_82
+    21300144: projectiles_sprite_sheet_83
+    21300146: projectiles_sprite_sheet_84
+    21300148: projectiles_sprite_sheet_85
+    21300150: projectiles_sprite_sheet_86
+    21300152: projectiles_sprite_sheet_87
+    21300154: projectiles_sprite_sheet_88
+    21300156: projectiles_sprite_sheet_89
+    21300158: projectiles_sprite_sheet_90
+    21300160: projectiles_sprite_sheet_91
+    21300162: projectiles_sprite_sheet_92
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +118,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 60
   alphaIsTransparency: 1
   textureType: 8
@@ -50,6 +134,7 @@ TextureImporter:
         height: 25
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_1
       rect:
         serializedVersion: 2
@@ -59,6 +144,7 @@ TextureImporter:
         height: 29
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_2
       rect:
         serializedVersion: 2
@@ -68,6 +154,7 @@ TextureImporter:
         height: 29
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_3
       rect:
         serializedVersion: 2
@@ -77,6 +164,7 @@ TextureImporter:
         height: 33
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_4
       rect:
         serializedVersion: 2
@@ -86,6 +174,7 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: _missile_sprite_test
       rect:
         serializedVersion: 2
@@ -95,6 +184,7 @@ TextureImporter:
         height: 35
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_6
       rect:
         serializedVersion: 2
@@ -104,6 +194,7 @@ TextureImporter:
         height: 29
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_7
       rect:
         serializedVersion: 2
@@ -113,6 +204,7 @@ TextureImporter:
         height: 27
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_8
       rect:
         serializedVersion: 2
@@ -122,6 +214,7 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_9
       rect:
         serializedVersion: 2
@@ -131,15 +224,7 @@ TextureImporter:
         height: 20
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: projectiles_sprite_sheet_11
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 1085
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_12
       rect:
         serializedVersion: 2
@@ -149,6 +234,7 @@ TextureImporter:
         height: 25
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_13
       rect:
         serializedVersion: 2
@@ -158,6 +244,7 @@ TextureImporter:
         height: 29
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_14
       rect:
         serializedVersion: 2
@@ -167,6 +254,7 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_15
       rect:
         serializedVersion: 2
@@ -176,6 +264,7 @@ TextureImporter:
         height: 27
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_16
       rect:
         serializedVersion: 2
@@ -185,6 +274,7 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_17
       rect:
         serializedVersion: 2
@@ -194,6 +284,7 @@ TextureImporter:
         height: 35
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_18
       rect:
         serializedVersion: 2
@@ -203,6 +294,7 @@ TextureImporter:
         height: 29
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_19
       rect:
         serializedVersion: 2
@@ -212,6 +304,7 @@ TextureImporter:
         height: 26
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_20
       rect:
         serializedVersion: 2
@@ -221,6 +314,7 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_21
       rect:
         serializedVersion: 2
@@ -230,6 +324,7 @@ TextureImporter:
         height: 21
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_22
       rect:
         serializedVersion: 2
@@ -239,15 +334,7 @@ TextureImporter:
         height: 4
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: projectiles_sprite_sheet_23
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 1024
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_24
       rect:
         serializedVersion: 2
@@ -257,6 +344,7 @@ TextureImporter:
         height: 26
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_25
       rect:
         serializedVersion: 2
@@ -266,6 +354,7 @@ TextureImporter:
         height: 29
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_26
       rect:
         serializedVersion: 2
@@ -275,6 +364,7 @@ TextureImporter:
         height: 29
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_27
       rect:
         serializedVersion: 2
@@ -284,6 +374,7 @@ TextureImporter:
         height: 27
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_28
       rect:
         serializedVersion: 2
@@ -293,6 +384,7 @@ TextureImporter:
         height: 41
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_29
       rect:
         serializedVersion: 2
@@ -302,6 +394,7 @@ TextureImporter:
         height: 43
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_30
       rect:
         serializedVersion: 2
@@ -311,6 +404,7 @@ TextureImporter:
         height: 37
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_31
       rect:
         serializedVersion: 2
@@ -320,6 +414,7 @@ TextureImporter:
         height: 34
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_32
       rect:
         serializedVersion: 2
@@ -329,6 +424,7 @@ TextureImporter:
         height: 29
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_33
       rect:
         serializedVersion: 2
@@ -338,6 +434,7 @@ TextureImporter:
         height: 28
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_34
       rect:
         serializedVersion: 2
@@ -347,6 +444,7 @@ TextureImporter:
         height: 4
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: _new_bullet_sprite
       rect:
         serializedVersion: 2
@@ -356,6 +454,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_46
       rect:
         serializedVersion: 2
@@ -365,6 +464,7 @@ TextureImporter:
         height: 42
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_47
       rect:
         serializedVersion: 2
@@ -374,6 +474,7 @@ TextureImporter:
         height: 37
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_48
       rect:
         serializedVersion: 2
@@ -383,6 +484,7 @@ TextureImporter:
         height: 34
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_49
       rect:
         serializedVersion: 2
@@ -392,6 +494,7 @@ TextureImporter:
         height: 29
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_50
       rect:
         serializedVersion: 2
@@ -401,6 +504,7 @@ TextureImporter:
         height: 28
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_51
       rect:
         serializedVersion: 2
@@ -410,6 +514,7 @@ TextureImporter:
         height: 43
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_52
       rect:
         serializedVersion: 2
@@ -419,6 +524,7 @@ TextureImporter:
         height: 43
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_53
       rect:
         serializedVersion: 2
@@ -428,6 +534,7 @@ TextureImporter:
         height: 43
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_54
       rect:
         serializedVersion: 2
@@ -437,6 +544,7 @@ TextureImporter:
         height: 43
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_55
       rect:
         serializedVersion: 2
@@ -446,6 +554,7 @@ TextureImporter:
         height: 48
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_56
       rect:
         serializedVersion: 2
@@ -455,6 +564,7 @@ TextureImporter:
         height: 43
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_57
       rect:
         serializedVersion: 2
@@ -464,6 +574,7 @@ TextureImporter:
         height: 40
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_58
       rect:
         serializedVersion: 2
@@ -473,6 +584,7 @@ TextureImporter:
         height: 35
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_59
       rect:
         serializedVersion: 2
@@ -482,6 +594,7 @@ TextureImporter:
         height: 34
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_60
       rect:
         serializedVersion: 2
@@ -491,6 +604,7 @@ TextureImporter:
         height: 44
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_61
       rect:
         serializedVersion: 2
@@ -500,6 +614,7 @@ TextureImporter:
         height: 44
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_62
       rect:
         serializedVersion: 2
@@ -509,6 +624,7 @@ TextureImporter:
         height: 44
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_63
       rect:
         serializedVersion: 2
@@ -518,6 +634,7 @@ TextureImporter:
         height: 43
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_64
       rect:
         serializedVersion: 2
@@ -527,6 +644,7 @@ TextureImporter:
         height: 47
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_65
       rect:
         serializedVersion: 2
@@ -536,6 +654,7 @@ TextureImporter:
         height: 41
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_66
       rect:
         serializedVersion: 2
@@ -545,6 +664,7 @@ TextureImporter:
         height: 38
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_67
       rect:
         serializedVersion: 2
@@ -554,6 +674,7 @@ TextureImporter:
         height: 33
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_68
       rect:
         serializedVersion: 2
@@ -563,6 +684,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_69
       rect:
         serializedVersion: 2
@@ -572,6 +694,7 @@ TextureImporter:
         height: 44
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_70
       rect:
         serializedVersion: 2
@@ -581,6 +704,7 @@ TextureImporter:
         height: 44
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_71
       rect:
         serializedVersion: 2
@@ -590,6 +714,7 @@ TextureImporter:
         height: 44
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_72
       rect:
         serializedVersion: 2
@@ -599,6 +724,7 @@ TextureImporter:
         height: 43
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_73
       rect:
         serializedVersion: 2
@@ -608,6 +734,7 @@ TextureImporter:
         height: 19
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_74
       rect:
         serializedVersion: 2
@@ -617,6 +744,7 @@ TextureImporter:
         height: 20
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_75
       rect:
         serializedVersion: 2
@@ -626,6 +754,7 @@ TextureImporter:
         height: 21
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_76
       rect:
         serializedVersion: 2
@@ -635,6 +764,7 @@ TextureImporter:
         height: 26
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_77
       rect:
         serializedVersion: 2
@@ -644,6 +774,7 @@ TextureImporter:
         height: 25
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_78
       rect:
         serializedVersion: 2
@@ -653,6 +784,7 @@ TextureImporter:
         height: 36
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_79
       rect:
         serializedVersion: 2
@@ -662,6 +794,7 @@ TextureImporter:
         height: 39
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_80
       rect:
         serializedVersion: 2
@@ -671,6 +804,7 @@ TextureImporter:
         height: 36
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_81
       rect:
         serializedVersion: 2
@@ -680,6 +814,7 @@ TextureImporter:
         height: 5
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_82
       rect:
         serializedVersion: 2
@@ -689,6 +824,7 @@ TextureImporter:
         height: 5
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_83
       rect:
         serializedVersion: 2
@@ -698,6 +834,7 @@ TextureImporter:
         height: 49
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_84
       rect:
         serializedVersion: 2
@@ -707,6 +844,7 @@ TextureImporter:
         height: 48
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_85
       rect:
         serializedVersion: 2
@@ -716,6 +854,7 @@ TextureImporter:
         height: 38
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_86
       rect:
         serializedVersion: 2
@@ -725,6 +864,7 @@ TextureImporter:
         height: 39
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_87
       rect:
         serializedVersion: 2
@@ -734,6 +874,7 @@ TextureImporter:
         height: 36
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_88
       rect:
         serializedVersion: 2
@@ -743,6 +884,7 @@ TextureImporter:
         height: 5
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_89
       rect:
         serializedVersion: 2
@@ -752,6 +894,7 @@ TextureImporter:
         height: 5
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_90
       rect:
         serializedVersion: 2
@@ -761,6 +904,7 @@ TextureImporter:
         height: 50
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_91
       rect:
         serializedVersion: 2
@@ -770,6 +914,7 @@ TextureImporter:
         height: 4
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectiles_sprite_sheet_92
       rect:
         serializedVersion: 2
@@ -779,5 +924,6 @@ TextureImporter:
         height: 49
       alignment: 0
       pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

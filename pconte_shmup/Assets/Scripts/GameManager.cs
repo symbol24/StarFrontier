@@ -61,6 +61,9 @@ public class GameManager : MonoBehaviour {
 
 	
 	void Start(){
+		//mouse cursor
+		Screen.showCursor = false;
+
 		//creating bullets into stacks
 		m_ProjectileStacks = new Stack<ProjectileController>[m_ProjectilePrefabs.Length];
 		for(int i = 0; i < m_ProjectilePrefabs.Length; i++){

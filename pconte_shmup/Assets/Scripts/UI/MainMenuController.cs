@@ -12,6 +12,9 @@ public class MainMenuController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//mouse
+		Screen.showCursor = false;
+
 		//setting the game state to playing
 		currentState = gameState.playing;
 		
